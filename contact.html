@@ -110,24 +110,29 @@
     <div class="form-card reveal">
       <h3>Book your free scorecard</h3>
       <p class="fc-sub">Takes about 2 minutes. We will be in touch within 24 hours to schedule.</p>
-      <form class="cform" onsubmit="handleContact(event)">
+      <form class="cform" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleContact(event)">
+        <input type="hidden" name="access_key" value="181dc2a5-c73b-48be-977b-442f893132da">
+        <input type="hidden" name="subject" value="New Scorecard Request from the Full Plate website">
+        <input type="hidden" name="from_name" value="Full Plate Marketing Website">
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
         <div class="frow">
-          <div class="fg"><label for="fn">First Name</label><input type="text" id="fn" placeholder="Jane" required></div>
-          <div class="fg"><label for="ln">Last Name</label><input type="text" id="ln" placeholder="Smith" required></div>
+          <div class="fg"><label for="fn">First Name</label><input type="text" id="fn" name="First Name" placeholder="Jane" required></div>
+          <div class="fg"><label for="ln">Last Name</label><input type="text" id="ln" name="Last Name" placeholder="Smith" required></div>
         </div>
-        <div class="fg"><label for="em">Email Address</label><input type="email" id="em" placeholder="jane@yourbusiness.com" required></div>
-        <div class="fg"><label for="ph">Phone (optional)</label><input type="tel" id="ph" placeholder="(252) 555-0123"></div>
-        <div class="fg"><label for="bz">Business Name</label><input type="text" id="bz" placeholder="Smith Family Dental" required></div>
-        <div class="fg"><label for="wb">Website (if you have one)</label><input type="url" id="wb" placeholder="https://yourwebsite.com"></div>
+        <div class="fg"><label for="em">Email Address</label><input type="email" id="em" name="Email" placeholder="jane@yourbusiness.com" required></div>
+        <div class="fg"><label for="ph">Phone</label><input type="tel" id="ph" name="Phone" placeholder="(252) 555-0123" required></div>
+        <div class="fg"><label for="bz">Business Name</label><input type="text" id="bz" name="Business Name" placeholder="Smith Family Dental" required></div>
+        <div class="fg"><label for="wb">Website (if you have one)</label><input type="url" id="wb" name="Website" placeholder="https://yourwebsite.com"></div>
         <div class="fg"><label for="ind">What kind of business?</label>
-          <select id="ind">
+          <select id="ind" name="What kind of business">
             <option value="" disabled selected>Select your industry</option>
             <option>Health &amp; Wellness</option><option>Dental / Medical</option><option>Home Services / Trades</option>
             <option>Retail</option><option>Restaurant / Food</option><option>Professional Services</option>
             <option>Fitness / Gym</option><option>Other</option>
           </select>
         </div>
-        <div class="fg"><label for="goal">What is your biggest goal right now? (optional)</label><textarea id="goal" placeholder="More patients, opening a new location, getting old customers back..."></textarea></div>
+        <div class="fg"><label for="goal">What is your biggest goal right now? (optional)</label><textarea id="goal" name="Biggest Goal" placeholder="More patients, opening a new location, getting old customers back..."></textarea></div>
+        <div class="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" style="margin:4px 0"></div>
         <button type="submit" class="fsubmit">Get My Free Scorecard</button>
         <p class="fnote">No spam. No sales pressure. Just a real scorecard.</p>
       </form>
@@ -150,11 +155,36 @@
   </ul>
   <span class="footer-copy">&copy; 2026 Full Plate Marketing Co.</span>
 </footer>
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <script>
-  function handleContact(e){
+  async function handleContact(e){
     e.preventDefault();
-    const card=e.target.closest('.form-card');
-    card.innerHTML='<div style="text-align:center;padding:40px 12px"><div style="font-family:\'DM Serif Display\',serif;font-size:26px;color:var(--near-black);margin-bottom:14px">Thank you.</div><p style="font-size:15px;color:var(--near-black);opacity:.68;line-height:1.7;max-width:320px;margin:0 auto">Your request is in. We will be in touch within 24 hours to schedule your free scorecard call.</p></div>';
+    const form=e.target;
+    const card=form.closest('.form-card');
+    const cap=form.querySelector('textarea[name="h-captcha-response"]');
+    if(!cap||!cap.value){showFormError(form,'Please check the box below to confirm you are human, then submit again.');return;}
+    const btn=form.querySelector('.fsubmit');
+    const label=btn.textContent;
+    btn.disabled=true;btn.textContent='Sending...';
+    const data=Object.fromEntries(new FormData(form));
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+      const out=await res.json();
+      if(out.success){
+        card.innerHTML='<div style="text-align:center;padding:40px 12px"><div style="font-family:\'DM Serif Display\',serif;font-size:26px;color:var(--near-black);margin-bottom:14px">We got it.</div><p style="font-size:15px;color:var(--near-black);opacity:.72;line-height:1.7;max-width:340px;margin:0 auto">Thanks for reaching out. A real person on our team will get back to you within one business day to set up your free scorecard. We are glad you are here.</p></div>';
+      }else{
+        btn.disabled=false;btn.textContent=label;
+        showFormError(form,'Something went wrong on our end. Please try again, or email us directly at hello@fullplatemarketing.co.');
+      }
+    }catch(err){
+      btn.disabled=false;btn.textContent=label;
+      showFormError(form,'We could not reach the server. Please check your connection and try again, or email us at hello@fullplatemarketing.co.');
+    }
+  }
+  function showFormError(form,msg){
+    let el=form.querySelector('.fform-error');
+    if(!el){el=document.createElement('p');el.className='fform-error';el.style.cssText='color:var(--maroon);font-size:14px;line-height:1.5;margin-top:10px';form.appendChild(el);}
+    el.textContent=msg;
   }
 </script><script>
   const reveals=document.querySelectorAll('.reveal');
