@@ -132,7 +132,6 @@
           </select>
         </div>
         <div class="fg"><label for="goal">What is your biggest goal right now? (optional)</label><textarea id="goal" name="Biggest Goal" placeholder="More patients, opening a new location, getting old customers back..."></textarea></div>
-        <div class="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" style="margin:4px 0"></div>
         <button type="submit" class="fsubmit">Get My Free Scorecard</button>
         <p class="fnote">No spam. No sales pressure. Just a real scorecard.</p>
       </form>
@@ -155,14 +154,11 @@
   </ul>
   <span class="footer-copy">&copy; 2026 Full Plate Marketing Co.</span>
 </footer>
-<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 <script>
   async function handleContact(e){
     e.preventDefault();
     const form=e.target;
     const card=form.closest('.form-card');
-    const cap=form.querySelector('textarea[name="h-captcha-response"]');
-    if(!cap||!cap.value){showFormError(form,'Please check the box below to confirm you are human, then submit again.');return;}
     const btn=form.querySelector('.fsubmit');
     const label=btn.textContent;
     btn.disabled=true;btn.textContent='Sending...';
