@@ -167,7 +167,10 @@
       const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
       const out=await res.json();
       if(out.success){
-        card.innerHTML='<div style="text-align:center;padding:40px 12px"><div style="font-family:\'DM Serif Display\',serif;font-size:26px;color:var(--near-black);margin-bottom:14px">We got it.</div><p style="font-size:15px;color:var(--near-black);opacity:.72;line-height:1.7;max-width:340px;margin:0 auto">Thanks for reaching out. A real person on our team will get back to you within one business day to set up your free scorecard. We are glad you are here.</p></div>';
+        let fn=(data['First Name']||'').trim().replace(/[<>&"]/g,'');
+        if(fn){fn=fn.charAt(0).toUpperCase()+fn.slice(1);}
+        const head=fn?('Thanks, '+fn+'. We got it.'):'We got it.';
+        card.innerHTML='<div style="text-align:center;padding:40px 12px"><div style="font-family:\'DM Serif Display\',serif;font-size:26px;color:var(--near-black);margin-bottom:14px">'+head+'</div><p style="font-size:15px;color:var(--near-black);opacity:.72;line-height:1.7;max-width:360px;margin:0 auto">A real person on our team will get back to you shortly to set up your free scorecard. We are glad you are here. 🍽️</p></div>';
       }else{
         btn.disabled=false;btn.textContent=label;
         showFormError(form,'Something went wrong on our end. Please try again, or email us directly at hello@fullplatemarketing.co.');
