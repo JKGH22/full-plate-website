@@ -68,6 +68,9 @@
   .fsubmit{background:var(--maroon);color:var(--cream);padding:16px 28px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;transition:background .2s,transform .15s;margin-top:6px}
   .fsubmit:hover{background:#6b1614;transform:translateY(-1px)}
   .fnote{font-size:12px;color:var(--near-black);opacity:.45;text-align:center}
+  .schedule-card h3{font-family:'DM Serif Display',serif;font-size:22px;color:var(--near-black);margin-bottom:6px}
+  .schedule-card .sched-sub{font-size:14px;color:var(--near-black);opacity:.6;margin-bottom:20px}
+  .calendly-inline-widget{min-width:0;width:100%;height:720px}
   .alt-contact{background:var(--cream-light);padding:44px 48px 64px;text-align:center}
   .alt-inner{max-width:560px;margin:0 auto}
   .alt-inner h2{font-family:'DM Serif Display',serif;font-size:26px;color:var(--near-black);margin-bottom:12px}
@@ -75,7 +78,7 @@
   .alt-inner a{color:var(--maroon);font-weight:600;text-decoration:none}
   .alt-inner a:hover{text-decoration:underline}
 
-  @media (max-width:900px){nav{padding:0 24px}section{padding:64px 24px}footer{padding:40px 24px;flex-direction:column;align-items:flex-start}.contact-hero{padding:110px 24px 40px}.contact-body{padding:40px 24px 36px}.contact-grid{grid-template-columns:1fr;gap:40px}.form-card{padding:28px}.frow{grid-template-columns:1fr}.alt-contact{padding:36px 24px 48px}}
+  @media (max-width:900px){nav{padding:0 24px}section{padding:64px 24px}footer{padding:40px 24px;flex-direction:column;align-items:flex-start}.contact-hero{padding:110px 24px 40px}.contact-body{padding:40px 24px 36px}.contact-grid{grid-template-columns:1fr;gap:40px}.form-card{padding:28px}.frow{grid-template-columns:1fr}.alt-contact{padding:36px 24px 48px}.calendly-inline-widget{height:1000px}}
   @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 </style>
 <meta name="description" content="Request a complete marketing scorecard for your business. No pitch, no pressure.">
@@ -118,34 +121,10 @@
         <span class="ca-tag">The Full Plate Promise</span>
       </div>
     </div>
-    <div class="form-card reveal">
-      <h3>Get a complete Marketing Scorecard for your business.</h3>
-      <p class="fc-sub">The form takes about 2 minutes. We will reach out within 24 hours to schedule your Kitchen Check.</p>
-      <form class="cform" action="https://api.web3forms.com/submit" method="POST" onsubmit="handleContact(event)">
-        <input type="hidden" name="access_key" value="181dc2a5-c73b-48be-977b-442f893132da">
-        <input type="hidden" name="subject" value="New Scorecard Request from the Full Plate website">
-        <input type="hidden" name="from_name" value="Full Plate Marketing Website">
-        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="frow">
-          <div class="fg"><label for="fn">First Name</label><input type="text" id="fn" name="First Name" placeholder="Jane" required></div>
-          <div class="fg"><label for="ln">Last Name</label><input type="text" id="ln" name="Last Name" placeholder="Smith" required></div>
-        </div>
-        <div class="fg"><label for="em">Email Address</label><input type="email" id="em" name="Email" placeholder="jane@yourbusiness.com" required></div>
-        <div class="fg"><label for="ph">Phone</label><input type="tel" id="ph" name="Phone" placeholder="(252) 555-0123" required></div>
-        <div class="fg"><label for="bz">Business Name</label><input type="text" id="bz" name="Business Name" placeholder="Smith Family Dental" required></div>
-        <div class="fg"><label for="wb">Website (if you have one)</label><input type="text" id="wb" name="Website" placeholder="yourwebsite.com" autocomplete="url"></div>
-        <div class="fg"><label for="ind">What kind of business?</label>
-          <select id="ind" name="What kind of business">
-            <option value="" disabled selected>Select your industry</option>
-            <option>Health &amp; Wellness</option><option>Dental / Medical</option><option>Home Services / Trades</option>
-            <option>Retail</option><option>Restaurant / Food</option><option>Professional Services</option>
-            <option>Fitness / Gym</option><option>Other</option>
-          </select>
-        </div>
-        <div class="fg"><label for="goal">What is your biggest goal right now? (optional)</label><textarea id="goal" name="Biggest Goal" placeholder="More patients, opening a new location, getting old customers back..."></textarea></div>
-        <button type="submit" class="fsubmit">Submit</button>
-        <p class="fnote">No spam. No sales pressure. Just a real scorecard.</p>
-      </form>
+    <div class="schedule-card reveal">
+      <h3>Pick a time for your Kitchen Check</h3>
+      <p class="sched-sub">Choose a slot that works for you and we will meet you there. About 30 minutes, no pitch, no pressure.</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/hello-fullplatemarketing/kitchen-check?hide_gdpr_banner=1&amp;background_color=f5efe2&amp;text_color=1b2f33&amp;primary_color=531211"></div>
     </div>
   </div>
 </section>
@@ -166,37 +145,6 @@
   <span class="footer-copy">Proudly based on the Outer Banks of North Carolina &middot; &copy; 2026 Full Plate Marketing Co.</span>
 </footer>
 <script>
-  async function handleContact(e){
-    e.preventDefault();
-    const form=e.target;
-    const card=form.closest('.form-card');
-    const btn=form.querySelector('.fsubmit');
-    const label=btn.textContent;
-    btn.disabled=true;btn.textContent='Sending...';
-    const data=Object.fromEntries(new FormData(form));
-    try{
-      const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
-      const out=await res.json();
-      if(out.success){
-        let fn=(data['First Name']||'').trim().replace(/[<>&"]/g,'');
-        if(fn){fn=fn.charAt(0).toUpperCase()+fn.slice(1);}
-        const head=fn?('Thanks, '+fn+'. We got it.'):'We got it.';
-        card.innerHTML='<div style="text-align:center;padding:40px 12px"><div style="font-family:\'DM Serif Display\',serif;font-size:26px;color:var(--near-black);margin-bottom:14px">'+head+'</div><p style="font-size:15px;color:var(--near-black);opacity:.72;line-height:1.7;max-width:360px;margin:0 auto">A real person on our team will get back to you shortly to set up your scorecard.</p></div>';
-      }else{
-        btn.disabled=false;btn.textContent=label;
-        showFormError(form,'Something went wrong on our end. Please try again, or email us directly at hello@fullplatemarketing.co.');
-      }
-    }catch(err){
-      btn.disabled=false;btn.textContent=label;
-      showFormError(form,'We could not reach the server. Please check your connection and try again, or email us at hello@fullplatemarketing.co.');
-    }
-  }
-  function showFormError(form,msg){
-    let el=form.querySelector('.fform-error');
-    if(!el){el=document.createElement('p');el.className='fform-error';el.style.cssText='color:var(--maroon);font-size:14px;line-height:1.5;margin-top:10px';form.appendChild(el);}
-    el.textContent=msg;
-  }
-</script><script>
   const reveals=document.querySelectorAll('.reveal');
   const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*90);obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
   reveals.forEach(el=>obs.observe(el));
@@ -204,4 +152,5 @@
   const nv=document.querySelector('nav');
   if(nv)window.addEventListener('scroll',()=>{nv.style.boxShadow=window.scrollY>10?'0 2px 24px rgba(27,47,51,.1)':'none';},{passive:true});
 </script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body></html>
