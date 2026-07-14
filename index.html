@@ -76,8 +76,10 @@
   .course-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
   .col-label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--sky);margin-bottom:14px}
   .svc-tags{display:flex;flex-wrap:wrap;gap:8px}
-  .svc-tag{font-size:13px;font-weight:500;line-height:1.3;padding:7px 15px;border-radius:100px;border:1px solid var(--cream-dark);color:var(--near-black);background:transparent}
+  .svc-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;line-height:1.3;padding:6px 15px 6px 8px;border-radius:100px;border:1px solid var(--cream-dark);color:var(--near-black);background:transparent}
+  .svc-tag::before{content:"\2713";flex:none;display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--maroon);color:var(--cream);font-size:10px;font-weight:700}
   .course-card.dark .svc-tag{border-color:rgba(236,221,198,.35);color:var(--cream)}
+  .course-card.dark .svc-tag::before{background:var(--sky);color:var(--near-black)}
   .svc-tag.solid{background:var(--maroon);border-color:var(--maroon);color:var(--cream);font-weight:600}
   .how-section{background:var(--near-black)}
   .how-section .sec-eyebrow{color:var(--sky)}
