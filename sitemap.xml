@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage — highest priority, changes frequently -->
+  <url>
+    <loc>https://fullplatemarketing.co/</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Contact — primary conversion page -->
+  <url>
+    <loc>https://fullplatemarketing.co/contact.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- About — trust/authority page -->
+  <url>
+    <loc>https://fullplatemarketing.co/about.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Learning Hub — content hub, grows over time -->
+  <url>
+    <loc>https://fullplatemarketing.co/learning-hub.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Google Business Profile 101 -->
+  <url>
+    <loc>https://fullplatemarketing.co/blog-google-business-profile-101.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: 3 Ways OBX Owners Lose Customers From a Missed Call -->
+  <url>
+    <loc>https://fullplatemarketing.co/blog-missed-calls-obx.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: Google's New Review Rules for Restaurants -->
+  <url>
+    <loc>https://fullplatemarketing.co/google-review-rules-for-restaurants.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy — utility page, low SEO value -->
+  <url>
+    <loc>https://fullplatemarketing.co/privacy.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
