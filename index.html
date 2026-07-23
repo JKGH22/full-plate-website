@@ -87,12 +87,9 @@
   .course-card.dark .svc-tag{border-color:rgba(236,221,198,.35);color:var(--cream)}
   .course-card.dark .svc-tag::before{background:var(--sky);color:var(--near-black)}
   .svc-tag.solid{background:var(--maroon);border-color:var(--maroon);color:var(--cream);font-weight:600}
-  .svc-feature{display:block;text-decoration:none;background:var(--sky-light);border:1px solid var(--sky);transition:transform .15s,box-shadow .2s}
-  .svc-feature:hover{transform:translateY(-3px);box-shadow:0 20px 52px rgba(27,47,51,.14)}
-  .svc-feature .course-eyebrow{color:var(--near-black)}
-  .course-badge.new-badge{background:var(--sky);color:var(--near-black)}
-  .svc-feature-link{display:inline-block;margin-top:4px;font-size:14px;font-weight:600;color:var(--maroon)}
-  .svc-feature:hover .svc-feature-link{text-decoration:underline}
+  a.svc-tag{text-decoration:none;transition:border-color .18s,background .18s,color .18s}
+  a.svc-tag:hover{border-color:var(--near-black);background:rgba(27,47,51,.05)}
+  a.svc-tag.solid:hover{background:var(--near-black);border-color:var(--near-black);color:var(--cream)}
   .how-section{background:var(--near-black)}
   .how-section .sec-eyebrow{color:var(--sky)}
   .how-section .sec-headline{color:var(--white)}
@@ -194,16 +191,11 @@
         <div class="svc-tags">
           <span class="svc-tag">Increase website traffic</span>
           <span class="svc-tag">Google Ads + Meta Ads</span>
+          <a class="svc-tag solid" href="chatgpt-ads-obx.html">ChatGPT Ads Management</a>
           <span class="svc-tag">Conversion Rate Optimization</span>
           <span class="svc-tag">Social media growth</span>
         </div>
       </article>
-      <div class="course-arrow" aria-hidden="true">&darr;</div>
-      <a class="course-card svc-feature" href="chatgpt-ads-obx.html">
-        <div class="course-head"><span class="course-eyebrow">ChatGPT Ads Management</span><span class="course-badge new-badge">New</span></div>
-        <p class="course-outcome">Millions of people now ask ChatGPT where to eat, stay, and shop. Ads inside those conversations just opened up, and we manage them end to end. Be one of the first businesses on the Outer Banks in the room.</p>
-        <span class="svc-feature-link">See how it works &rarr;</span>
-      </a>
     </div>
   </div>
 </section>
