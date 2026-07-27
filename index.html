@@ -87,6 +87,16 @@
   .course-card.dark .svc-tag{border-color:rgba(236,221,198,.35);color:var(--cream)}
   .course-card.dark .svc-tag::before{background:var(--sky);color:var(--near-black)}
   .svc-tag.solid{background:var(--maroon);border-color:var(--maroon);color:var(--cream);font-weight:600}
+  .svc-tag.alt{border-style:dashed;opacity:.8}
+  .svc-tag.alt::before{content:"+";background:transparent;border:1px solid var(--maroon);color:var(--maroon);font-size:12px}
+  .course-card.dark .svc-tag.alt{border-color:rgba(236,221,198,.3)}
+  .course-card.dark .svc-tag.alt::before{background:transparent;border-color:var(--sky);color:var(--sky)}
+  .svc-more{display:none;margin-top:8px}
+  .svc-more.open{display:flex}
+  .see-more-btn{margin-top:16px;background:transparent;border:1px solid rgba(27,47,51,.25);color:var(--near-black);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 22px;min-height:44px;border-radius:100px;cursor:pointer;transition:border-color .2s,background .2s}
+  .see-more-btn:hover{border-color:var(--near-black);background:rgba(27,47,51,.05)}
+  .course-card.dark .see-more-btn{border-color:rgba(236,221,198,.35);color:var(--cream)}
+  .course-card.dark .see-more-btn:hover{border-color:var(--cream);background:rgba(236,221,198,.08)}
   .how-section{background:var(--near-black)}
   .how-section .sec-eyebrow{color:var(--sky)}
   .how-section .sec-headline{color:var(--white)}
@@ -149,50 +159,67 @@
     <div class="course-ladder reveal">
       <article class="course-card light">
         <div class="course-head"><span class="course-eyebrow">Solid Foundations</span></div>
-        <p class="course-outcome">Customers find you the <em>moment</em> they go looking. And every lead gets followed up with and booked.</p>
+        <p class="course-outcome">Customers find you the moment they go looking.</p>
         <div class="svc-tags">
-          <span class="svc-tag">Brand Guidelines</span>
-          <span class="svc-tag">Website + Lead capture</span>
-          <span class="svc-tag">Mobile Apps</span>
+          <span class="svc-tag">Website + Lead Capture</span>
           <span class="svc-tag">Google Business Profile</span>
+          <span class="svc-tag">Organized Customer Database</span>
         </div>
+        <div class="svc-tags svc-more" id="more-foundations">
+          <span class="svc-tag alt">Brand Guidelines</span>
+          <span class="svc-tag alt">Mobile App</span>
+          <span class="svc-tag alt">AI Consulting</span>
+        </div>
+        <button type="button" class="see-more-btn" aria-expanded="false" aria-controls="more-foundations">See More</button>
       </article>
       <div class="course-arrow" aria-hidden="true">&darr;</div>
       <article class="course-card dark">
-        <div class="course-head"><span class="course-eyebrow">The Experience</span></div>
-        <p class="course-outcome">Create a World-Class experience for you and your customers.</p>
-        <div class="course-cols">
-          <div class="course-col">
-            <span class="col-label">Customer Experience</span>
-            <div class="svc-tags">
-              <span class="svc-tag">24/7 Front Desk</span>
-              <span class="svc-tag">Upsells &amp; Cross-Sells</span>
-              <span class="svc-tag">More Reviews</span>
-              <span class="svc-tag">Emails / Texts</span>
-            </div>
-          </div>
-          <div class="course-col">
-            <span class="col-label">Owner Experience</span>
-            <div class="svc-tags">
-              <span class="svc-tag">Automations</span>
-              <span class="svc-tag">AI Dashboard</span>
-              <span class="svc-tag">AI Personal Assistant</span>
-              <span class="svc-tag">Reporting</span>
-            </div>
-          </div>
+        <div class="course-head"><span class="course-eyebrow">Customer Experience</span></div>
+        <p class="course-outcome">Every lead followed up. Every customer comes back.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">24/7 Front Desk</span>
+          <span class="svc-tag">More Reviews</span>
+          <span class="svc-tag">Customer Communications</span>
         </div>
+        <div class="svc-tags svc-more" id="more-customer">
+          <span class="svc-tag alt">Upsells + Return Visits</span>
+          <span class="svc-tag alt">Referral Systems</span>
+          <span class="svc-tag alt">Missed-Call Text-Back</span>
+        </div>
+        <button type="button" class="see-more-btn" aria-expanded="false" aria-controls="more-customer">See More</button>
+      </article>
+      <div class="course-arrow" aria-hidden="true">&darr;</div>
+      <article class="course-card dark">
+        <div class="course-head"><span class="course-eyebrow">Owner Experience</span></div>
+        <p class="course-outcome">Get your time back. See everything at a glance.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Business Automations</span>
+          <span class="svc-tag">Smart Assistant</span>
+          <span class="svc-tag">KPI Dashboards</span>
+        </div>
+        <div class="svc-tags svc-more" id="more-owner">
+          <span class="svc-tag alt">Automated Reporting</span>
+          <span class="svc-tag alt">Brand Kit + Voice</span>
+          <span class="svc-tag alt">AI Operating System</span>
+        </div>
+        <button type="button" class="see-more-btn" aria-expanded="false" aria-controls="more-owner">See More</button>
       </article>
       <div class="course-arrow" aria-hidden="true">&darr;</div>
       <article class="course-card light">
         <div class="course-head"><span class="course-eyebrow">Fuel for the Fire</span></div>
-        <p class="course-outcome">The kitchen is ready. Now let's fill every seat.</p>
+        <p class="course-outcome">The kitchen is ready. Now fill every seat.</p>
         <div class="svc-tags">
-          <span class="svc-tag">Increase website traffic</span>
-          <span class="svc-tag">Google Ads + Meta Ads</span>
-          <span class="svc-tag">ChatGPT Ads Management</span>
-          <span class="svc-tag">Conversion Rate Optimization</span>
-          <span class="svc-tag">Social media growth</span>
+          <span class="svc-tag">Google + Meta Ads</span>
+          <span class="svc-tag">ChatGPT Ads</span>
+          <span class="svc-tag">SEO + GEO</span>
         </div>
+        <div class="svc-tags svc-more" id="more-fuel">
+          <span class="svc-tag alt">Social Media Growth</span>
+          <span class="svc-tag alt">Blogs + Content</span>
+          <span class="svc-tag alt">Partnerships</span>
+          <span class="svc-tag alt">Conversion Rate Optimization</span>
+        </div>
+        <button type="button" class="see-more-btn" aria-expanded="false" aria-controls="more-fuel">See More</button>
       </article>
     </div>
   </div>
@@ -254,5 +281,13 @@
   document.querySelectorAll('.pain-grid,.services-grid,.steps').forEach(g=>{g.querySelectorAll('.reveal').forEach((c,i)=>{c.style.transitionDelay=(i*.1)+'s';});});
   const nv=document.querySelector('nav');
   if(nv)window.addEventListener('scroll',()=>{nv.style.boxShadow=window.scrollY>10?'0 2px 24px rgba(27,47,51,.1)':'none';},{passive:true});
+  document.querySelectorAll('.see-more-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const panel=document.getElementById(btn.getAttribute('aria-controls'));
+      const open=panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded',open?'true':'false');
+      btn.textContent=open?'See Less':'See More';
+    });
+  });
 </script>
 </body></html>
