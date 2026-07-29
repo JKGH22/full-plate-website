@@ -57,6 +57,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog: How Much Should You Actually Spend on Marketing? -->
+  <url>
+    <loc>https://fullplatemarketing.co/marketing-budget-benchmarks.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Privacy Policy — utility page, low SEO value -->
   <url>
     <loc>https://fullplatemarketing.co/privacy.html</loc>
