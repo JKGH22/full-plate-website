@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Should You Actually Spend on Marketing? Benchmarks by Industry | Full Plate Marketing Co.</title>
+<meta name="description" content="Marketing budget benchmarks by industry for Outer Banks business owners, pulled from Gartner, Deloitte, Forrester, and the SBA. Restaurants, healthcare and wellness, home and local services, professional and financial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--cream:#ECDDC6;--cream-light:#F5EFE2;--cream-dark:#D9C8A9;--near-black:#1B2F33;--maroon:#531211;--sky:#98C1D9;--sky-light:#E1F3F8;--white:#FFFFFF}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream-light);color:var(--near-black);line-height:1.6;overflow-x:hidden}
+
+  /* ---- nav (matched to site) ---- */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,239,226,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,47,51,.08);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
+  .nav-brand{display:flex;align-items:center}
+  .nav-logo-img{height:30px;width:auto;display:block}
+  .nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+  .nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--near-black);padding:8px 16px;border-radius:6px;transition:background .18s;opacity:.7;white-space:nowrap}
+  .nav-links a:hover{background:rgba(27,47,51,.07);opacity:1}
+  .nav-links a.active{opacity:1}
+  .nav-cta{background:var(--near-black)!important;color:var(--cream)!important;opacity:1!important}
+  .nav-cta:hover{background:var(--maroon)!important}
+  @media (max-width:600px){body nav{padding:0 14px}.nav-links{gap:2px}nav .nav-links a{padding:6px 8px;font-size:13px}.nav-logo-img{height:26px}}
+  @media (max-width:400px){body nav{padding:0 10px}.nav-links{gap:1px}nav .nav-links a{padding:5px 7px;font-size:12px}.nav-logo-img{height:23px}}
+  @media (max-width:360px){body nav{padding:0 7px}nav .nav-links a{padding:4px 5px;font-size:11.5px}.nav-logo-img{height:20px}}
+
+  /* ---- buttons (matched) ---- */
+  .btn-primary{background:var(--near-black);color:var(--cream);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid var(--near-black);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
+  .btn-primary:hover{background:var(--maroon);border-color:var(--maroon);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--near-black);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid rgba(27,47,51,.25);cursor:pointer;transition:border-color .2s,background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
+  .btn-ghost:hover{border-color:var(--near-black);background:rgba(27,47,51,.05);transform:translateY(-2px)}
+
+  /* ---- article shell ---- */
+  .article-head{max-width:760px;margin:0 auto;padding:128px 32px 8px}
+  .eyebrow{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:'';width:24px;height:2px;background:var(--maroon);flex-shrink:0}
+  .article-head h1{font-family:'DM Serif Display',serif;font-size:clamp(34px,5vw,52px);line-height:1.12;color:var(--near-black);margin-bottom:20px}
+  .article-head h1 em{font-style:italic;color:var(--maroon)}
+  .article-meta{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;font-size:13px;color:var(--near-black);opacity:.55;border-top:1px solid rgba(27,47,51,.12);border-bottom:1px solid rgba(27,47,51,.12);padding:16px 0;margin-top:8px}
+  .article-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--near-black);opacity:.4}
+
+  article{max-width:760px;margin:0 auto;padding:8px 32px 40px}
+  .lede{font-size:20px;line-height:1.7;color:var(--near-black);opacity:.9;margin:40px 0 8px}
+  article h2{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.2vw,32px);line-height:1.2;color:var(--near-black);margin:56px 0 18px}
+  article p{font-size:17px;line-height:1.85;color:var(--near-black);opacity:.82;margin-bottom:20px}
+  article p a{color:var(--maroon);text-decoration:underline;text-underline-offset:2px}
+  article strong{font-weight:600;opacity:1}
+
+  /* ---- benchmark cards ---- */
+  .benchmarks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 8px}
+  @media (max-width:640px){.benchmarks{grid-template-columns:1fr}}
+  .bench{background:var(--cream);border:1px solid var(--cream-dark);border-radius:14px;padding:26px 24px}
+  .bench-name{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:10px}
+  .bench-num{font-family:'DM Serif Display',serif;font-size:52px;line-height:1;color:var(--near-black);margin-bottom:4px}
+  .bench-range{font-size:13px;color:var(--near-black);opacity:.55;margin-bottom:16px}
+  .bench-quote{font-family:'DM Serif Display',serif;font-style:italic;font-size:16px;line-height:1.45;color:var(--near-black);opacity:.9;border-top:1px solid rgba(27,47,51,.12);padding-top:14px}
+
+  /* ---- the turn callout ---- */
+  .turn{background:var(--near-black);color:var(--cream);border-radius:16px;padding:40px 36px;margin:48px 0}
+  .turn h2{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.4vw,34px);line-height:1.18;color:var(--cream);margin:0 0 12px}
+  .turn p{color:rgba(236,221,198,.82);font-size:17px;line-height:1.8;margin:0}
+
+  /* ---- numbered method ---- */
+  .steps{list-style:none;counter-reset:step;margin:24px 0 8px;display:grid;gap:14px}
+  .steps li{counter-increment:step;position:relative;padding:20px 22px 20px 66px;background:var(--white);border:1px solid var(--cream-dark);border-radius:12px}
+  .steps li::before{content:counter(step);position:absolute;left:20px;top:18px;width:32px;height:32px;border-radius:8px;background:var(--sky-light);color:var(--near-black);font-family:'DM Serif Display',serif;font-size:18px;display:flex;align-items:center;justify-content:center}
+  .steps li strong{display:block;font-size:16px;font-weight:600;margin-bottom:4px;opacity:1}
+  .steps li span{font-size:15px;line-height:1.7;color:var(--near-black);opacity:.75}
+
+  .sources{font-size:12.5px;line-height:1.7;color:var(--near-black);opacity:.5;margin:36px 0 8px;padding-top:18px;border-top:1px solid rgba(27,47,51,.12)}
+
+  /* ---- CTA band ---- */
+  .cta-band{max-width:760px;margin:8px auto 96px;padding:0 32px}
+  .cta-inner{background:var(--cream);border:1px solid var(--cream-dark);border-radius:16px;padding:44px 40px;text-align:center}
+  .cta-inner .eyebrow{justify-content:center}
+  .cta-inner h2{font-family:'DM Serif Display',serif;font-size:clamp(24px,3.4vw,34px);line-height:1.18;margin:0 0 12px}
+  .cta-inner p{font-size:17px;line-height:1.7;color:var(--near-black);opacity:.75;max-width:520px;margin:0 auto 28px}
+
+  /* ---- footer (matched) ---- */
+  footer{background:var(--near-black);padding:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  .footer-logo-img{height:34px;width:auto;display:block}
+  .footer-links{display:flex;gap:28px;list-style:none}
+  .footer-links a{font-size:13px;color:rgba(236,221,198,.45);text-decoration:none;transition:color .18s}
+  .footer-links a:hover{color:var(--cream)}
+  .footer-copy{font-size:12px;color:rgba(236,221,198,.28)}
+
+  /* ---- reveal (matched) ---- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co." class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learning-hub.html" class="active">Learning Hub</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="article-head">
+  <div class="eyebrow">Marketing Benchmarks</div>
+  <h1>How much should you <em>actually</em> spend on marketing?</h1>
+  <div class="article-meta">
+    <span>Full Plate Marketing Co.</span>
+    <span class="dot"></span>
+    <span>July 29, 2026</span>
+    <span class="dot"></span>
+    <span>4 min read</span>
+  </div>
+</header>
+
+<article>
+  <p class="lede">Here is a question most owners cannot answer on the spot: how much did you spend on marketing this year, as a percent of your revenue? If the number does not come quickly, you are in good company. And that gap is worth closing.</p>
+
+  <h2>Do you know your number?</h2>
+  <p>Most owners run marketing on instinct. Instinct built the business, so it works to a point. It tells you the slow weeks, the loyal regulars, the season that carries the year. What instinct cannot tell you is whether you are spending enough to stay found, or quietly leaving customers on the table.</p>
+  <p>The reason the number is fuzzy is simple. Marketing spend hides in a dozen places: ads, listings, your website, the tools you pay for monthly, printing, sponsorships, and anyone you pay to post or design. Add those up honestly and most owners are surprised, in one direction or the other. You cannot manage what you have never measured.</p>
+
+  <h2>The benchmarks, by industry</h2>
+  <p>Industry averages give you a place to stand. These are blended from the Gartner CMO Spend Survey, the Deloitte, Duke, and AMA CMO Survey, Forrester, and the SBA. The tilde matters: these are benchmarks, not your exact number. Read them as a starting line, not a verdict.</p>
+
+  <div class="benchmarks">
+    <div class="bench reveal">
+      <div class="bench-name">Restaurants</div>
+      <div class="bench-num">~5%</div>
+      <div class="bench-range">Established. Nearer 6 to 10% when new or growing.</div>
+      <div class="bench-quote">Great food fills tables. Marketing fills them again on a Tuesday in October.</div>
+    </div>
+    <div class="bench reveal">
+      <div class="bench-name">Healthcare &amp; Wellness</div>
+      <div class="bench-num">~8%</div>
+      <div class="bench-range">A wide 6 to 14% across the sector.</div>
+      <div class="bench-quote">You take care of patients. Something has to take care of the pipeline.</div>
+    </div>
+    <div class="bench reveal">
+      <div class="bench-name">Home &amp; Local Services</div>
+      <div class="bench-num">~10%</div>
+      <div class="bench-range">8 to 12%, higher in competitive markets.</div>
+      <div class="bench-quote">Good work earns the referral. Marketing earns the customer who has not met you yet.</div>
+    </div>
+    <div class="bench reveal">
+      <div class="bench-name">Professional &amp; Financial</div>
+      <div class="bench-num">~8%</div>
+      <div class="bench-range">Typically 7 to 10%.</div>
+      <div class="bench-quote">The best in town still needs to be found by the town.</div>
+    </div>
+  </div>
+
+  <div class="turn reveal">
+    <h2>A benchmark is not your number</h2>
+    <p>Here is the honest part. The average is a mirror, not a map. It tells you roughly where your industry sits, but it cannot tell you if you are over, under, or right on target, because it does not know your revenue, your season, or your goals. Most owners cannot say what they actually spend within two percent. That is the real gap, and it is fixable in an afternoon.</p>
+  </div>
+
+  <h2>How to find your real number</h2>
+  <p>You do not need software or a spreadsheet degree. You need one honest hour.</p>
+  <ol class="steps">
+    <li><strong>Add up last month's marketing spend</strong><span>Everything meant to bring in or keep customers: ads, listings, your website, tools, anyone you pay to post or design, printing, sponsorships. Most owners forget about half of these the first time.</span></li>
+    <li><strong>Divide by last month's revenue</strong><span>That single division gives you a percentage. That percentage is your number.</span></li>
+    <li><strong>Compare it to your benchmark</strong><span>Line your number up against your industry above. Now you can see, in plain terms, whether you are spending enough to stay found or quietly falling behind.</span></li>
+  </ol>
+
+  <p>Once you know the number, the next question stops being "should I spend more" and becomes "am I spending it in the right places." That is a far better question, and a much easier one to act on. Know your number. Then spend it right.</p>
+
+  <p class="sources">Sources: Gartner CMO Spend Survey (2025), Deloitte / Duke / AMA CMO Survey, Forrester, and the U.S. Small Business Administration. Figures are blended industry benchmarks and rounded to a single average per sector.</p>
+</article>
+
+<section class="cta-band">
+  <div class="cta-inner reveal">
+    <div class="eyebrow">Your number, not the average</div>
+    <h2>Curious where you actually stand?</h2>
+    <p>A Kitchen Check is a free thirty minute conversation. We help you find your real marketing number, then tell you whether you are over, under, or right where you should be, and what we would fix first. No pitch, no pressure.</p>
+    <a href="contact.html" class="btn-primary">Book a Kitchen Check</a>
+  </div>
+</section>
+
+<footer>
+  <img src="logo-cream.png" width="357" height="90" alt="Full Plate Marketing Co." class="footer-logo-img">
+  <ul class="footer-links">
+    <li><a href="learning-hub.html">Learning Hub</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+  </ul>
+  <span class="footer-copy">Proudly based on the Outer Banks of North Carolina &middot; &copy; 2026 Full Plate Marketing Co.</span>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>
