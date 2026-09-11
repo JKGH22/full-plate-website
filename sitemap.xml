@@ -28,7 +28,7 @@
   <!-- Learning Hub — content hub, grows over time -->
   <url>
     <loc>https://fullplatemarketing.co/learning-hub.html</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -61,6 +61,14 @@
   <url>
     <loc>https://fullplatemarketing.co/marketing-budget-benchmarks.html</loc>
     <lastmod>2026-07-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog: How to Get Old Patients Back -->
+  <url>
+    <loc>https://fullplatemarketing.co/get-old-patients-back.html</loc>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
