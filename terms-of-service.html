@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | Full Plate Marketing Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root{--cream:#ECDDC6;--cream-light:#F5EFE2;--cream-dark:#D9C8A9;--near-black:#1B2F33;--maroon:#531211;--sky:#98C1D9;--sky-light:#E1F3F8;--white:#FFFFFF}
+  html{scroll-behavior:smooth}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream-light);color:var(--near-black);line-height:1.6;overflow-x:hidden}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,239,226,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,47,51,.08);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
+  .nav-brand{display:flex;align-items:center}
+  .nav-logo-img{height:30px;width:auto;display:block}
+  .nav-links{display:flex;align-items:center;gap:6px;list-style:none}
+  .nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--near-black);padding:8px 16px;border-radius:6px;transition:background .18s;opacity:.7;white-space:nowrap}
+  .nav-links a:hover{background:rgba(27,47,51,.07);opacity:1}
+  .nav-links a.active{opacity:1}
+  @media (max-width:600px){body nav{padding:0 14px}.nav-links{gap:2px}nav .nav-links a{padding:6px 8px;font-size:13px}.nav-logo-img{height:26px}}
+  @media (max-width:400px){body nav{padding:0 10px}.nav-links{gap:1px}nav .nav-links a{padding:5px 7px;font-size:12px}.nav-logo-img{height:23px}}
+  @media (max-width:360px){body nav{padding:0 7px}nav .nav-links a{padding:4px 5px;font-size:11.5px}.nav-logo-img{height:20px}}
+  .nav-cta{background:var(--near-black)!important;color:var(--cream)!important;opacity:1!important}
+  .nav-cta:hover{background:var(--maroon)!important}
+  .btn-primary{background:var(--near-black);color:var(--cream);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid var(--near-black);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
+  .btn-primary:hover{background:var(--maroon);border-color:var(--maroon);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--near-black);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid rgba(27,47,51,.25);cursor:pointer;transition:border-color .2s,background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
+  .btn-ghost:hover{border-color:var(--near-black);background:rgba(27,47,51,.05);transform:translateY(-2px)}
+  section{padding:96px 48px}
+  .section-inner{max-width:1120px;margin:0 auto}
+  .sec-eyebrow{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:16px}
+  .sec-headline{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);line-height:1.15;color:var(--near-black);margin-bottom:18px;max-width:620px}
+  .sec-body{font-size:16px;line-height:1.75;color:var(--near-black);opacity:.68;max-width:560px;margin-bottom:56px}
+  footer{background:var(--near-black);padding:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+  .footer-logo-img{height:34px;width:auto;display:block}
+  .footer-links{display:flex;gap:28px;list-style:none;flex-wrap:wrap}
+  .footer-links a{font-size:13px;color:rgba(236,221,198,.45);text-decoration:none;transition:color .18s}
+  .footer-links a:hover{color:var(--cream)}
+  .footer-copy{font-size:12px;color:rgba(236,221,198,.28)}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+  .about-hero{padding:140px 48px 64px;max-width:860px;margin:0 auto;text-align:center}
+  .about-hero .eyebrow-c{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:20px}
+  .about-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,54px);line-height:1.12;color:var(--near-black);margin-bottom:22px}
+  .about-hero h1 em{font-style:italic;color:var(--maroon)}
+  .about-hero p{font-size:18px;line-height:1.75;color:var(--near-black);opacity:.7;max-width:640px;margin:0 auto}
+  .story{background:var(--white);padding:80px 48px}
+  .story-inner{max-width:760px;margin:0 auto}
+  .story h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,34px);line-height:1.2;color:var(--near-black);margin:0 0 20px}
+  .story h3{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:600;color:var(--near-black);margin:0 0 10px}
+  .story p{font-size:17px;line-height:1.85;color:var(--near-black);opacity:.78;margin-bottom:22px}
+  .story p:last-child{margin-bottom:0}
+  .story p strong{font-weight:600;opacity:1;color:var(--near-black)}
+  .story ul{list-style:none;margin:0 0 22px;padding:0}
+  .story ul li{position:relative;font-size:17px;line-height:1.75;color:var(--near-black);opacity:.78;padding-left:26px;margin-bottom:12px}
+  .story ul li::before{content:"✓";position:absolute;left:0;top:0;color:var(--maroon);font-weight:600;opacity:.9}
+  .story a{color:var(--maroon);text-decoration:underline;text-underline-offset:2px}
+  .contact-block{font-size:17px;line-height:1.9;color:var(--near-black);opacity:.85}
+  .contact-block strong{opacity:1}
+  .story-divider{height:1px;background:var(--cream-dark);margin:48px 0}
+
+  @media (max-width:900px){nav{padding:0 24px}section{padding:64px 24px}footer{padding:40px 24px;flex-direction:column;align-items:flex-start}.about-hero{padding:110px 24px 48px}.story{padding:56px 24px}}
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+<meta name="description" content="The terms that govern Full Plate Marketing LLC's website and services, including our SMS and text messaging policy. Plain language.">
+<link rel="canonical" href="https://fullplatemarketing.co/terms-of-service.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terms of Service | Full Plate Marketing Co.">
+<meta property="og:description" content="The terms that govern Full Plate Marketing LLC's website and services, including our SMS and text messaging policy. Plain language.">
+<meta property="og:url" content="https://fullplatemarketing.co/terms-of-service.html">
+<meta property="og:image" content="https://fullplatemarketing.co/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-brand"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co." class="nav-logo-img"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="learning-hub.html">Learning Hub</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<section class="about-hero" style="padding-bottom:24px">
+  <div class="eyebrow-c">Full Plate Marketing Co.</div>
+  <h1>Terms of Service</h1>
+  <p>Last updated: September 14, 2026. These terms cover how you may use our website and services. We have kept them plain and readable.</p>
+</section>
+<section class="story">
+  <div class="story-inner">
+
+    <h2>Acceptance of terms</h2>
+    <p>These Terms of Service ("Terms") are an agreement between you and Full Plate Marketing LLC ("Full Plate," "we," "us," or "our"). By using this website, requesting a Kitchen Check, or engaging us for services, you agree to these Terms. If you do not agree, please do not use the website or our services.</p>
+    <div class="story-divider"></div>
+
+    <h2>Description of services</h2>
+    <p>Full Plate Marketing LLC provides marketing, automation, and customer relationship management (CRM) services for local businesses, primarily in the Outer Banks of North Carolina. Depending on your engagement, this may include websites, CRM setup, lead follow-up, email and text campaigns, review management, and related marketing work.</p>
+    <p>The specific services, scope, and deliverables for your engagement are set out in a separate proposal, statement of work, or written agreement. If anything in that written agreement conflicts with these Terms, the written agreement controls for that engagement.</p>
+    <div class="story-divider"></div>
+
+    <h2>Client responsibilities and acceptable use</h2>
+    <p>To do good work, we need your cooperation. You agree to:</p>
+    <ul>
+      <li>Give us accurate information and timely access to the accounts, assets, and approvals we need to deliver your services.</li>
+      <li>Own or have the right to use any content, logos, images, and materials you provide to us.</li>
+      <li>Use our website and services only for lawful purposes.</li>
+      <li>Follow all applicable laws and platform rules, including those covering email, text messaging, advertising, and consumer protection.</li>
+    </ul>
+    <p>You agree not to misuse the website, interfere with its operation, attempt to gain unauthorized access, or use our services to send unlawful, deceptive, or unsolicited messages.</p>
+    <div class="story-divider"></div>
+
+    <h2>Fees, billing, and month-to-month terms</h2>
+    <p>Fees for your services are set out in your proposal or written agreement. Unless your agreement says otherwise, ongoing services are billed monthly and run on a month-to-month basis.</p>
+    <p>Invoices are due on the date stated on the invoice. Recurring fees are billed in advance for the coming month. If a payment is late, we may pause work until the account is current. Setup fees and one-time project fees are non-refundable once work has begun, except as required by law or as stated in your written agreement. You are responsible for any third-party platform or software fees, which are billed separately unless we tell you otherwise in writing.</p>
+    <div class="story-divider"></div>
+
+    <h2>Intellectual property and ownership of deliverables</h2>
+    <p>You keep ownership of the content, brand assets, and materials you provide to us. On full payment for a given deliverable, we assign to you ownership of the final custom deliverables we created specifically for you under that engagement, such as the copy, designs, and website pages we produced for your business.</p>
+    <p>We keep ownership of our own pre-existing tools, templates, frameworks, code libraries, and know-how, including anything we developed before or outside your engagement. Where our deliverables include those pre-existing materials, we grant you a non-exclusive license to use them as part of the deliverable. We may reference our work for you in our portfolio and marketing unless you ask us in writing not to.</p>
+    <div class="story-divider"></div>
+
+    <h2>Third-party services and platforms disclaimer</h2>
+    <p>Our services often rely on third-party platforms and tools, such as CRM systems, messaging and email providers, hosting, analytics, payment processors, and advertising networks. These platforms are controlled by their own providers and governed by their own terms and pricing, which can change without our control.</p>
+    <p>We are not responsible for the availability, performance, policies, outages, or actions of any third-party platform, and we do not guarantee any specific result from advertising or messaging platforms. Your use of those platforms is subject to their terms, and you are responsible for maintaining any accounts held in your name.</p>
+    <div class="story-divider"></div>
+
+    <h2>SMS and Text Messaging</h2>
+    <p>By providing your mobile number and checking the marketing consent box on our website chat widget, you consent to receive marketing and promotional text messages from Full Plate Marketing LLC. Consent is optional and is not a condition of any purchase.</p>
+    <p>Message frequency varies. Message and data rates may apply. Reply STOP at any time to opt out. Reply HELP for assistance.</p>
+    <p>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Information sharing with subcontractors who provide support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
+    <p>Marketing consent is collected separately from transactional consent and the two are not combined.</p>
+    <div class="story-divider"></div>
+
+    <h2>Warranty disclaimer</h2>
+    <p>We care deeply about the quality of our work and will perform our services in a professional manner. That said, the website and our services are provided "as is" and "as available," without warranties of any kind, whether express or implied, including any implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+    <p>Marketing results depend on many factors outside our control, including your market, offer, budget, and third-party platforms. We do not warrant or guarantee any specific level of leads, sales, revenue, rankings, or other results.</p>
+    <div class="story-divider"></div>
+
+    <h2>Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, Full Plate Marketing LLC and its owners, employees, and contractors will not be liable for any indirect, incidental, special, consequential, or punitive damages, or for any lost profits, lost revenue, or lost data, arising out of or relating to your use of the website or our services.</p>
+    <p>To the fullest extent permitted by law, our total liability for any claim arising out of or relating to these Terms or our services will not exceed the amount you paid us for the services in the three (3) months before the event giving rise to the claim.</p>
+    <div class="story-divider"></div>
+
+    <h2>Termination</h2>
+    <p>Either of us may end a month-to-month engagement with written notice, as described in your written agreement. Unless your agreement says otherwise, cancellation takes effect at the end of the current billing month, and fees already billed for that month are not refunded.</p>
+    <p>We may suspend or end your access to the website or services if you breach these Terms, misuse the services, or fail to pay. On termination, you remain responsible for any amounts owed for work performed up to the termination date. Sections of these Terms that by their nature should survive termination, such as payment obligations, intellectual property, disclaimers, and limitation of liability, will survive.</p>
+    <div class="story-divider"></div>
+
+    <h2>Changes to terms</h2>
+    <p>We may update these Terms from time to time. When we do, we will update the "Last updated" date at the top of this page. Your continued use of the website or our services after changes take effect means you accept the updated Terms.</p>
+    <div class="story-divider"></div>
+
+    <h2>Governing law</h2>
+    <p>These Terms are governed by the laws of the State of North Carolina, without regard to its conflict-of-laws rules. Any dispute arising out of or relating to these Terms or our services will be handled in the state or federal courts located in North Carolina, and you agree to that jurisdiction and venue.</p>
+    <div class="story-divider"></div>
+
+    <h2>Contact us</h2>
+    <p>Questions about these Terms? Reach out anytime.</p>
+    <p class="contact-block">
+      <strong>Full Plate Marketing LLC</strong><br>
+      PO Box 81<br>
+      Kill Devil Hills, NC 27948<br>
+      Email: <a href="mailto:hello@fullplatemarketing.co">hello@fullplatemarketing.co</a><br>
+      Phone: <a href="tel:+12522567046">(252) 256-7046</a>
+    </p>
+  </div>
+</section>
+<footer>
+  <img src="logo-cream.png" width="357" height="90" alt="Full Plate Marketing Co." class="footer-logo-img">
+  <ul class="footer-links">
+    <li><a href="learning-hub.html">Learning Hub</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="privacy.html">Privacy Policy</a></li>
+    <li><a href="terms-of-service.html">Terms of Service</a></li>
+  </ul>
+  <span class="footer-copy">Proudly based on the Outer Banks of North Carolina · © 2026 Full Plate Marketing Co.</span>
+</footer>
+<script>
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*90);obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(el=>obs.observe(el));
+  const nv=document.querySelector('nav');
+  if(nv)window.addEventListener('scroll',()=>{nv.style.boxShadow=window.scrollY>10?'0 2px 24px rgba(27,47,51,.1)':'none';},{passive:true});
+</script>
+</body>
+</html>
