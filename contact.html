@@ -72,6 +72,8 @@
   .fsubmit{background:var(--maroon);color:var(--cream);padding:16px 28px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;transition:background .2s,transform .15s;margin-top:6px}
   .fsubmit:hover{background:#6b1614;transform:translateY(-1px)}
   .fnote{font-size:12px;color:var(--near-black);opacity:.45;text-align:center}
+  .cf-consent{font-size:12.5px;line-height:1.55;color:var(--near-black);opacity:.6;margin-top:8px}
+  .cf-consent a{color:var(--maroon);font-weight:500;text-decoration:underline}
   .fg label .req{color:var(--maroon);margin-left:2px}
   .radio-fs{border:none;padding:0;margin:0;min-width:0}
   .radio-fs legend{font-size:11px;font-weight:600;letter-spacing:.5px;color:var(--near-black);opacity:.55;text-transform:uppercase;margin-bottom:8px;padding:0}
@@ -163,6 +165,7 @@
         <div class="fg cond-field" id="cf-phone-wrap" hidden>
           <label for="cf-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
           <input type="tel" id="cf-phone" name="Phone number" placeholder="(252) 555-0123" autocomplete="tel" disabled>
+          <p class="cf-consent">By providing your phone number you agree we may contact you about your inquiry. To receive marketing text messages, opt in separately on our <a href="sms-optin.html">SMS opt-in page</a>. Message and data rates may apply. Reply STOP to opt out.</p>
         </div>
         <button type="submit" class="fsubmit">Submit</button>
         <p class="fnote">No spam. No sales pressure. Just a real conversation.</p>
