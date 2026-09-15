@@ -81,4 +81,12 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- SMS opt-in — A2P 10DLC consent page -->
+  <url>
+    <loc>https://fullplatemarketing.co/sms-optin.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
