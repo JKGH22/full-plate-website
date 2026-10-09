@@ -1,83 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>About | Full Plate Marketing Co.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<style>
-  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  :root{--cream:#ECDDC6;--cream-light:#F5EFE2;--cream-dark:#D9C8A9;--near-black:#1B2F33;--maroon:#531211;--sky:#98C1D9;--sky-light:#E1F3F8;--white:#FFFFFF}
-  html{scroll-behavior:smooth}
-  body{font-family:'DM Sans',system-ui,sans-serif;background:var(--cream-light);color:var(--near-black);line-height:1.6;overflow-x:hidden}
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(245,239,226,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(27,47,51,.08);padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between}
-  .nav-brand{display:flex;align-items:center}
-  .nav-logo-img{height:30px;width:auto;display:block}
-  .nav-links{display:flex;align-items:center;gap:6px;list-style:none}
-  .nav-links a{text-decoration:none;font-size:14px;font-weight:500;color:var(--near-black);padding:8px 16px;border-radius:6px;transition:background .18s;opacity:.7;white-space:nowrap}
-  .nav-links a:hover{background:rgba(27,47,51,.07);opacity:1}
-  .nav-links a.active{opacity:1}
-  @media (max-width:600px){body nav{padding:0 14px}.nav-links{gap:2px}nav .nav-links a{padding:6px 8px;font-size:13px}.nav-logo-img{height:26px}}
-  @media (max-width:400px){body nav{padding:0 10px}.nav-links{gap:1px}nav .nav-links a{padding:5px 7px;font-size:12px}.nav-logo-img{height:23px}}
-  @media (max-width:360px){body nav{padding:0 7px}nav .nav-links a{padding:4px 5px;font-size:11.5px}.nav-logo-img{height:20px}}
-  .nav-cta{background:var(--near-black)!important;color:var(--cream)!important;opacity:1!important}
-  .nav-cta:hover{background:var(--maroon)!important}
-  .btn-primary{background:var(--near-black);color:var(--cream);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid var(--near-black);cursor:pointer;transition:background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
-  .btn-primary:hover{background:var(--maroon);border-color:var(--maroon);transform:translateY(-2px)}
-  .btn-ghost{background:transparent;color:var(--near-black);padding:15px 30px;border-radius:8px;font-size:15px;font-weight:500;font-family:'DM Sans',sans-serif;border:2px solid rgba(27,47,51,.25);cursor:pointer;transition:border-color .2s,background .2s,transform .15s;text-decoration:none;display:inline-block;line-height:1}
-  .btn-ghost:hover{border-color:var(--near-black);background:rgba(27,47,51,.05);transform:translateY(-2px)}
-  section{padding:96px 48px}
-  .section-inner{max-width:1120px;margin:0 auto}
-  .sec-eyebrow{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:16px}
-  .sec-headline{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.5vw,42px);line-height:1.15;color:var(--near-black);margin-bottom:18px;max-width:620px}
-  .sec-body{font-size:16px;line-height:1.75;color:var(--near-black);opacity:.68;max-width:560px;margin-bottom:56px}
-  footer{background:var(--near-black);padding:48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
-  .footer-logo-img{height:34px;width:auto;display:block}
-  .footer-links{display:flex;gap:28px;list-style:none}
-  .footer-links a{font-size:13px;color:rgba(236,221,198,.45);text-decoration:none;transition:color .18s}
-  .footer-links a:hover{color:var(--cream)}
-  .footer-copy{font-size:12px;color:rgba(236,221,198,.28)}
-  .footer-entity{display:block;font-size:11.5px;color:rgba(236,221,198,.22);margin-top:4px}
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.visible{opacity:1;transform:translateY(0)}
-  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-  
-  .about-hero{padding:140px 48px 64px;max-width:860px;margin:0 auto;text-align:center}
-  .about-hero .eyebrow-c{font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:20px}
-  .about-hero h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,54px);line-height:1.12;color:var(--near-black);margin-bottom:22px}
-  .about-hero h1 em{font-style:italic;color:var(--maroon)}
-  .about-hero p{font-size:18px;line-height:1.75;color:var(--near-black);opacity:.7;max-width:640px;margin:0 auto}
-  .story{background:var(--white);padding:80px 48px}
-  .story-inner{max-width:760px;margin:0 auto}
-  .story h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,34px);line-height:1.2;color:var(--near-black);margin:0 0 20px}
-  .story p{font-size:17px;line-height:1.85;color:var(--near-black);opacity:.78;margin-bottom:22px}
-  .story p strong{font-weight:600;opacity:1;color:var(--near-black)}
-  .story-divider{height:1px;background:var(--cream-dark);margin:48px 0}
-  .creds{background:var(--cream-light);padding:80px 48px}
-  .creds-inner{max-width:1000px;margin:0 auto}
-  .creds-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:48px}
-  .cred-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:12px;padding:32px 28px}
-  .cred-card .cc-num{font-family:'DM Serif Display',serif;font-size:34px;color:var(--maroon);line-height:1;margin-bottom:12px}
-  .cred-card h3{font-family:'DM Serif Display',serif;font-size:19px;color:var(--near-black);margin-bottom:8px}
-  .cred-card p{font-size:14px;line-height:1.65;color:var(--near-black);opacity:.62}
-  .logos-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;justify-content:center}
-  .logo-chip{background:var(--white);border:1px solid var(--cream-dark);border-radius:8px;padding:12px 22px;font-weight:600;font-size:15px;color:var(--near-black);opacity:.8}
-  .values{background:var(--near-black);padding:80px 48px}
-  .values-inner{max-width:860px;margin:0 auto;text-align:center}
-  .values-inner .sec-eyebrow{color:var(--sky)}
-  .values-inner h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,3vw,36px);color:var(--white);margin-bottom:18px}
-  .values-quote{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(22px,3vw,30px);color:var(--cream);line-height:1.45;margin:32px auto;max-width:680px}
-  .values-tag{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sky);font-weight:600}
-  .about-cta{background:var(--cream);text-align:center;padding:88px 48px}
-  .about-cta-inner{max-width:560px;margin:0 auto}
-  .about-cta h2{font-family:'DM Serif Display',serif;font-size:clamp(26px,3.5vw,40px);color:var(--near-black);margin-bottom:18px;line-height:1.2}
-  .about-cta p{font-size:16px;line-height:1.75;color:var(--near-black);opacity:.65;margin-bottom:32px}
-
-  @media (max-width:900px){nav{padding:0 24px}section{padding:64px 24px}footer{padding:40px 24px;flex-direction:column;align-items:flex-start}.about-hero{padding:110px 24px 48px}.story,.creds,.values,.about-cta{padding:56px 24px}}
-  @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-</style>
-<meta name="description" content="Meet Full Plate Marketing Co. — 15+ years of enterprise marketing experience, now serving Outer Banks service businesses in plain language. No jargon.">
+<meta name="description" content="Meet Full Plate Marketing Co.: 15+ years of enterprise marketing experience, now serving Outer Banks service businesses in plain language. No jargon.">
 <link rel="canonical" href="https://fullplatemarketing.co/about.html">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -87,78 +12,102 @@
 <meta property="og:url" content="https://fullplatemarketing.co/about.html">
 <meta property="og:image" content="https://fullplatemarketing.co/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head><body>
-<nav>
-  <a href="index.html" class="nav-brand"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co." class="nav-logo-img"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="learning-hub.html">Learning Hub</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="contact.html" class="nav-cta">Contact</a></li>
-  </ul>
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Full Plate Marketing Co. home"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co."></a>
+    <ul class="nav-links">
+      <li class="lg-only"><a href="learning-hub.html">Learning Hub</a></li>
+      <li class="lg-only"><a href="about.html" aria-current="page">About</a></li>
+      <li><a class="nav-kc" href="contact.html">Kitchen Check</a></li>
+      <li class="sm-only"><button type="button" class="nav-menu-btn" aria-expanded="false" aria-controls="navMenu" aria-label="Menu"><svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg><svg class="ic-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>
+    </ul>
+  </div>
+  <div class="nav-menu" id="navMenu" hidden>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <a href="learning-hub.html">Learning Hub</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Kitchen Check</a>
+    </div>
+  </div>
 </nav>
-<div class="about-hero">
-  <div class="eyebrow-c">About Full Plate</div>
-  <h1>Marketing lost its way. <em>We're bringing it back.</em></h1>
-  <p>Full Plate Marketing exists because business owners deserve a partner, not a salesman. We bring order to the chaos and put the customer experience back where it belongs, at the center of everything.</p>
-</div>
-<section class="story">
-  <div class="story-inner">
-    <h2 class="reveal">Why we started</h2>
-    <p class="reveal">Marketing got messy. It chased the dollar and forgot the customer. Too many companies lead with a shiny solution before they even understand the problem, then sell business owners a pitch instead of a partnership. That is marketing built backwards. Full Plate exists to do it right: diagnosis before prescription, the right solutions in the right order, and the customer experience at the center of everything. Because underneath it all, a great local business started with someone who fell in love with a craft, and they deserve a partner who protects that, not one more salesman chasing a close.</p>
-    <div class="story-divider"></div>
-    <h2 class="reveal">The experience behind it</h2>
-    <p class="reveal">Full Plate is built on more than fifteen years of marketing and operations experience inside some of the largest companies in the world. The systems that run enterprise marketing are the same ones that quietly transform a local business. Most small businesses just never get access to them.</p>
-    <p class="reveal">We bring that enterprise-level thinking down to the local level, in plain language, at a pace that makes sense for where your business actually is.</p>
-  </div>
-</section>
-<section class="creds">
-  <div class="creds-inner">
-    <div class="reveal" style="text-align:center;display:flex;flex-direction:column;align-items:center">
-      <p class="sec-eyebrow">The Track Record</p>
-      <h2 class="sec-headline" style="text-align:center">Built on real-world experience.</h2>
+<main id="top">
+  <header class="wrap hero">
+    <p class="eyebrow">About Full Plate</p>
+    <h1>Marketing lost its way.<br><em>We're bringing it back.</em></h1>
+    <p class="hero-sub wide">Full Plate Marketing exists because business owners deserve a partner, not a salesman. We bring order to the chaos and put the customer experience back where it belongs, at the center of everything.</p>
+  </header>
+
+  <section class="sec bg-white" aria-labelledby="storyTitle">
+    <div class="wrap prose">
+      <h2 id="storyTitle">Why we started</h2>
+      <p>Marketing got messy. It chased the dollar and forgot the customer. Too many companies lead with a shiny solution before they even understand the problem, then sell business owners a pitch instead of a partnership. That is marketing built backwards. Full Plate exists to do it right: diagnosis before prescription, the right solutions in the right order, and the customer experience at the center of everything. Because underneath it all, a great local business started with someone who fell in love with a craft, and they deserve a partner who protects that, not one more salesman chasing a close.</p>
+      <div class="prose-div" aria-hidden="true"></div>
+      <h2>The experience behind it</h2>
+      <p>Full Plate is built on more than fifteen years of marketing and operations experience inside some of the largest companies in the world. The systems that run enterprise marketing are the same ones that quietly transform a local business. Most small businesses just never get access to them.</p>
+      <p>We bring that enterprise-level thinking down to the local level, in plain language, at a pace that makes sense for where your business actually is.</p>
     </div>
-    <div class="creds-grid">
-      <div class="cred-card reveal"><div class="cc-num">15+</div><h3>Years of experience</h3><p>Fifteen-plus years in marketing and operations, across enterprise and local business.</p></div>
-      <div class="cred-card reveal"><div class="cc-num">CX</div><h3>Experience-first lens</h3><p>We are a customer experience and business owner experience company. That shapes everything we touch.</p></div>
-      <div class="cred-card reveal"><div class="cc-num">AI</div><h3>Modern systems</h3><p>Early, deep, hands-on experience with the AI tools that most local businesses have not figured out yet.</p></div>
-      <div class="cred-card reveal"><div class="cc-num">3</div><h3>Pillar framework</h3><p>Foundations, Experiences, Reach. We build in the right order so nothing gets wasted.</p></div>
+  </section>
+
+  <section class="sec" aria-labelledby="credTitle">
+    <div class="wrap">
+      <p class="eyebrow sec-eyebrow">The track record</p>
+      <h2 class="sec-title" id="credTitle">Built on real-world experience.</h2>
+      <div class="perks">
+        <article class="perk"><span class="stat">15+</span><div><h3>Years of experience</h3><p>Fifteen-plus years in marketing and operations, across enterprise and local business.</p></div></article>
+        <article class="perk"><span class="stat">CX</span><div><h3>Experience-first lens</h3><p>We are a customer experience and business owner experience company. That shapes everything we touch.</p></div></article>
+        <article class="perk"><span class="stat">AI</span><div><h3>Modern systems</h3><p>Early, deep, hands-on experience with the AI tools that most local businesses have not figured out yet.</p></div></article>
+        <article class="perk"><span class="stat">4</span><div><h3>Four courses, in order</h3><p>Foundations, Customer Experience, Owner Experience, Growth. We build in the right order so nothing gets wasted.</p></div></article>
+      </div>
     </div>
+  </section>
+
+  <section class="why" aria-labelledby="thinkTitle">
+    <div class="wrap">
+      <p class="eyebrow">How we think</p>
+      <h2 id="thinkTitle">The kitchen philosophy</h2>
+      <p class="quote">"We are the chef in the back of the house. You enjoy running your business."</p>
+      <span class="quote-tag">The Full Plate anchor</span>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="aboutCta">
+    <div class="wrap close-cta no-gap">
+      <h3 id="aboutCta">Let us take a look at your plate.</h3>
+      <p>Book a Kitchen Check and we will hand you a full marketing scorecard for your business. No pitch. No pressure.</p>
+      <a class="btn-ink btn-cta" href="contact.html"><span>Book your Kitchen Check</span><svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="logo-cream.png" width="357" height="90" alt="Full Plate Marketing Co.">
+        <p class="foot-local"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Proudly based on the Outer Banks of North Carolina.</p>
+      </div>
+      <ul class="socials" aria-label="Follow Full Plate">
+        <li><a class="soc fb" href="https://www.facebook.com/FullPlateMarketingCo" target="_blank" rel="noopener" aria-label="Full Plate on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8z"/></svg></a></li>
+        <li><a class="soc ig" href="https://www.instagram.com/fullplatemarketingco/" target="_blank" rel="noopener" aria-label="Full Plate on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+        <li><a class="soc li" href="https://www.linkedin.com/company/full-plate-marketing-co/" target="_blank" rel="noopener" aria-label="Full Plate on LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3.5" y="9" width="3.4" height="11.5" rx=".4"/><circle cx="5.2" cy="5.2" r="2"/><path d="M10 9h3.2v1.6c.6-1 1.8-1.9 3.6-1.9 3.4 0 4.1 2.2 4.1 5.1v6.7h-3.4v-5.9c0-1.4-.1-3.1-1.9-3.1-1.9 0-2.2 1.4-2.2 3v6H10z"/></svg></a></li>
+      </ul>
+    </div>
+    <ul class="foot-links">
+      <li><a href="learning-hub.html">Learning Hub</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-service.html">Terms of Service</a></li>
+      <li><a href="sms-optin.html">SMS Opt-In</a></li>
+    </ul>
+    <p class="foot-copy">&copy; 2026 Full Plate Marketing Co.<span class="foot-entity">Full Plate Marketing Co. is a trade name of Full Plate Marketing LLC.</span></p>
   </div>
-</section>
-<section class="values">
-  <div class="values-inner">
-    <p class="sec-eyebrow reveal">How We Think</p>
-    <h2 class="reveal">The kitchen philosophy</h2>
-    <p class="values-quote reveal">"We are the chef in the back of the house. You enjoy running your business."</p>
-    <span class="values-tag reveal">The Full Plate Anchor</span>
-  </div>
-</section>
-<section class="about-cta">
-  <div class="about-cta-inner reveal">
-    <p class="sec-eyebrow" style="display:inline-block;margin-bottom:16px">Ready When You Are</p>
-    <h2>Let us take a look at your plate.</h2>
-    <p>Book a call and we will hand you a full marketing scorecard for your business. No pitch. No pressure.</p>
-    <a href="contact.html" class="btn-primary" style="font-size:16px;padding:16px 36px">Get Your Marketing Scorecard</a>
-  </div>
-</section><footer>
-  <img src="logo-cream.png" width="357" height="90" alt="Full Plate Marketing Co." class="footer-logo-img">
-  <ul class="footer-links">
-    <li><a href="learning-hub.html">Learning Hub</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-    <li><a href="terms-of-service.html">Terms of Service</a></li>
-    <li><a href="sms-optin.html">SMS Opt-In</a></li>
-  </ul>
-  <span class="footer-copy">Proudly based on the Outer Banks of North Carolina &middot; &copy; 2026 Full Plate Marketing Co.<span class="footer-entity">Full Plate Marketing Co. is a trade name of Full Plate Marketing LLC.</span></span>
-</footer><script>
-  const reveals=document.querySelectorAll('.reveal');
-  const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*90);obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-  reveals.forEach(el=>obs.observe(el));
-  document.querySelectorAll('.pain-grid,.services-grid,.steps').forEach(g=>{g.querySelectorAll('.reveal').forEach((c,i)=>{c.style.transitionDelay=(i*.1)+'s';});});
-  const nv=document.querySelector('nav');
-  if(nv)window.addEventListener('scroll',()=>{nv.style.boxShadow=window.scrollY>10?'0 2px 24px rgba(27,47,51,.1)':'none';},{passive:true});
-</script>
+</footer>
+<script src="site.js"></script>
 <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6aa85771c8d7749cb0894b68" data-source="WEB_USER"></script>
 </body></html>
