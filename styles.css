@@ -351,3 +351,7 @@ section{scroll-margin-top:60px}
 .so-stats em{font-style:normal;color:var(--open)}
 
 .t-found{background:var(--t-found)}.t-cx{background:var(--t-cx)}.t-owner{background:var(--t-owner)}.t-growth{background:var(--t-growth)}
+
+/* footer NAP + Chamber membership */
+.foot-nap,.foot-member{font-size:14.5px;color:var(--cream);opacity:.85;margin-top:8px}
+.foot-nap a,.foot-member a{color:inherit;text-decoration:underline;text-underline-offset:3px}
