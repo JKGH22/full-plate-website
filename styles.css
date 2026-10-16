@@ -355,3 +355,13 @@ section{scroll-margin-top:60px}
 /* footer NAP + Chamber membership */
 .foot-nap,.foot-member{font-size:14.5px;color:var(--cream);opacity:.85;margin-top:8px}
 .foot-nap a,.foot-member a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+
+/* related links on posts */
+.related{margin:36px 0 8px;padding:20px 22px;border-radius:16px;background:rgba(27,47,51,.05)}
+.related h3{font-family:inherit;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#531211;margin:0 0 6px}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{margin:8px 0;font-size:16.5px;line-height:1.4}
+.related a{color:#1B2F33;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.hub-strip{max-width:640px;margin:24px auto 0}
+.kc-nap{margin-top:18px;font-size:16px}
+.kc-nap a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:3px}
