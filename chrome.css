@@ -74,3 +74,10 @@
 .nav :focus-visible,.foot :focus-visible{outline:2px solid var(--maroon);outline-offset:3px;border-radius:8px}
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:reduce){.nav *,.foot *{transition:none!important;animation:none!important}}
+
+/* related links on posts */
+.related{margin:36px 0 8px;padding:20px 22px;border-radius:16px;background:rgba(27,47,51,.05)}
+.related h3{font-family:inherit;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#531211;margin:0 0 6px}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{margin:8px 0;font-size:16.5px;line-height:1.4}
+.related a{color:#1B2F33;font-weight:600;text-decoration:underline;text-underline-offset:3px}
