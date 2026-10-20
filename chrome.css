@@ -57,15 +57,16 @@
 .soc.ig:hover,.soc.ig:focus-visible{background:radial-gradient(circle at 30% 107%,#FDF497 0%,#FDF497 5%,#FD5949 45%,#D6249F 60%,#285AEB 90%)}
 .soc.li:hover,.soc.li:focus-visible{background:#0A66C2}
 /* footer: leave a Google review */
-.foot-side{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-@media (min-width:760px){.foot-side{justify-content:flex-end}}
-.foot .foot-review{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:4px 18px 4px 4px;order:-1;border-radius:999px;text-decoration:none;color:var(--cream);background:rgba(236,221,198,.07);border:1px solid rgba(236,221,198,.2);transition:background .2s,border-color .2s,color .2s,transform .2s}
-.foot .foot-review:hover,.foot .foot-review:focus-visible{background:var(--cream);border-color:var(--cream);color:var(--ink);transform:translateY(-2px)}
-.rv-g{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#FFFFFF;flex:none}
-.rv-text{display:flex;flex-direction:column;line-height:1.15}
-.rv-title{font-family:var(--serif);font-style:italic;font-size:17px}
-.rv-sub{font-size:11.5px;opacity:.75;margin-top:2px;letter-spacing:.2px}
-.rv-stars{color:var(--gold);letter-spacing:1px;margin-left:4px}
+.foot-side{display:inline-flex;flex-direction:column;align-items:center;gap:10px}
+@media (max-width:759px){.foot-side{align-self:flex-start}}
+.soc.gg path{fill:currentColor;transition:fill .2s}
+.soc.gg:hover,.soc.gg:focus-visible{background:#FFFFFF}
+.soc.gg:hover .g-r,.soc.gg:focus-visible .g-r{fill:#EA4335}
+.soc.gg:hover .g-b,.soc.gg:focus-visible .g-b{fill:#4285F4}
+.soc.gg:hover .g-y,.soc.gg:focus-visible .g-y{fill:#FBBC05}
+.soc.gg:hover .g-g,.soc.gg:focus-visible .g-g{fill:#34A853}
+.foot .foot-review{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--cream);text-decoration:none;opacity:.85;transition:opacity .2s}
+.foot .foot-review:hover,.foot .foot-review:focus-visible{opacity:1;text-decoration:underline;text-underline-offset:3px}
 .foot-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 20px;list-style:none;padding:18px 0 0}
 @media (min-width:760px){.foot-links{display:flex;flex-wrap:wrap;gap:4px 24px}}
 .foot-links a{display:inline-flex;align-items:center;min-height:40px;text-decoration:none}
