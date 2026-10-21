@@ -4,7 +4,7 @@
   <!-- Homepage — highest priority, changes frequently -->
   <url>
     <loc>https://fullplatemarketing.co/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,6 +13,38 @@
   <url>
     <loc>https://fullplatemarketing.co/contact.html</loc>
     <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Customer Experience -->
+  <url>
+    <loc>https://fullplatemarketing.co/customer-experience.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Social Media Marketing -->
+  <url>
+    <loc>https://fullplatemarketing.co/social-media-marketing.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Lead Generation -->
+  <url>
+    <loc>https://fullplatemarketing.co/lead-generation.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Service: Website Design + Lead Capture -->
+  <url>
+    <loc>https://fullplatemarketing.co/website-design.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
