@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261020">
+<link rel="stylesheet" href="styles.css?v=20261021">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -180,6 +180,7 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
 .qv-steps li::before{content:counter(s);width:26px;height:26px;border-radius:50%;background:var(--cream-light);display:grid;place-items:center;font-size:12.5px;font-weight:700;flex:none}
 .qv-actions{display:flex;flex-direction:column;align-items:stretch;gap:4px;margin-top:14px}
 .qv-actions .btn-add{justify-content:center;min-height:var(--tap);font-size:16px}
+.qv-actions .qv-more{justify-content:center;text-decoration:underline;text-underline-offset:3px}
 .qv-close{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);display:grid;place-items:center;z-index:2}
 @media (min-width:700px){
   dialog.qv{width:min(820px,calc(100% - 48px));margin:auto;border-radius:26px;max-height:calc(100% - 48px)}
@@ -196,6 +197,12 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
   <div class="wrap nav-in">
     <a class="nav-logo" href="index.html" aria-label="Full Plate Marketing Co. home"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co."></a>
     <ul class="nav-links">
+      <li class="lg-only nav-dd-li"><details class="nav-dd"><summary>Services</summary><div class="nav-dd-menu">
+          <a href="customer-experience.html">Customer Experience</a>
+          <a href="social-media-marketing.html">Social Media</a>
+          <a href="lead-generation.html">Lead Generation</a>
+          <a href="website-design.html">Website + Lead Capture</a>
+      </div></details></li>
       <li class="lg-only"><a href="learning-hub.html">Learning Hub</a></li>
       <li class="lg-only"><a href="about.html">About</a></li>
       <li><a class="nav-kc" href="contact.html">Contact Us</a></li>
@@ -205,6 +212,11 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
   <div class="nav-menu" id="navMenu" hidden>
     <div class="wrap">
       <a href="index.html" aria-current="page">Home</a>
+      <p class="nav-sub-label">Services</p>
+      <a class="nav-sub" href="customer-experience.html">Customer Experience</a>
+      <a class="nav-sub" href="social-media-marketing.html">Social Media</a>
+      <a class="nav-sub" href="lead-generation.html">Lead Generation</a>
+      <a class="nav-sub" href="website-design.html">Website + Lead Capture</a>
       <a href="learning-hub.html">Learning Hub</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact Us</a>
@@ -246,6 +258,15 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
         <button type="button" class="btn-more" id="moreBtn" aria-expanded="false">Show 2 more</button>
         <p class="on-plate" id="onPlate" hidden>On your plate: <b id="onPlateN">0</b> <button type="button" class="btn-link" data-goplate>See it</button></p>
       </div>
+      <nav class="related hub-strip svc-strip" aria-label="Service pages">
+        <h3>Take a closer look</h3>
+        <ul>
+          <li><a href="customer-experience.html">Customer Experience: missed calls, reviews and follow-up</a></li>
+          <li><a href="social-media-marketing.html">Social Media: a plan behind every post</a></li>
+          <li><a href="lead-generation.html">Lead Generation: Google, AI search and paid ads</a></li>
+          <li><a href="website-design.html">Websites: built on research, made to capture leads</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
@@ -356,6 +377,10 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
       </div>
     </div>
     <ul class="foot-links">
+      <li><a href="customer-experience.html">Customer Experience</a></li>
+      <li><a href="social-media-marketing.html">Social Media</a></li>
+      <li><a href="lead-generation.html">Lead Generation</a></li>
+      <li><a href="website-design.html">Website + Lead Capture</a></li>
       <li><a href="learning-hub.html">Learning Hub</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -366,8 +391,8 @@ dialog.qv[open]{animation:sheet .3s cubic-bezier(.2,.8,.2,1)}
     <p class="foot-copy">&copy; 2026 Full Plate Marketing Co.<span class="foot-entity">Full Plate Marketing Co. is a trade name of Full Plate Marketing LLC.</span></p>
   </div>
 </footer>
-<script src="menu-data.js"></script>
-<script src="site.js"></script>
+<script src="menu-data.js?v=20261021"></script>
+<script src="site.js?v=20261021"></script>
 <script>
 const TYPES=[
   {id:"rest",label:"Restaurant or bar",who:"restaurants",svc:["reviews","gbp"]},
@@ -504,7 +529,7 @@ $("#concernChips").innerHTML=CONCERNS.map(c=>chip("concern",c.id,c.label)).join(
 const qv=$("#qv");
 function openQV(id){
   const s=byId[id],c=courseOf(s.course);
-  $("#qvBody").innerHTML=`<div class="qv-vis t-${s.course}">${vis(s)}</div><div class="qv-body"><p class="eyebrow">${c.name}</p><h2 id="qvTitle">${s.name}</h2><p class="card-line">${s.line}</p><h4>How it works</h4><ol class="qv-steps">${s.steps.map(x=>`<li>${x}</li>`).join("")}</ol><div class="qv-actions"><button type="button" class="btn-add" data-add="${s.id}" aria-pressed="false">Add to plate</button></div></div>`;
+  $("#qvBody").innerHTML=`<div class="qv-vis t-${s.course}">${vis(s)}</div><div class="qv-body"><p class="eyebrow">${c.name}</p><h2 id="qvTitle">${s.name}</h2><p class="card-line">${s.line}</p><h4>How it works</h4><ol class="qv-steps">${s.steps.map(x=>`<li>${x}</li>`).join("")}</ol><div class="qv-actions"><button type="button" class="btn-add" data-add="${s.id}" aria-pressed="false">Add to plate</button>${s.page?`<a class="btn-link qv-more" href="${s.page}">Learn more about this service</a>`:""}</div></div>`;
   syncButtons();
   if(typeof qv.showModal==="function")qv.showModal();else qv.setAttribute("open","");
 }

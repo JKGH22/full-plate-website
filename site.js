@@ -8,3 +8,11 @@
   menu.addEventListener("click",e=>{if(e.target.closest("a"))set(false);});
   matchMedia("(min-width:640px)").addEventListener("change",e=>{if(e.matches)set(false);});
 })();
+
+/* Services dropdown: close on outside click or Escape. */
+(function(){
+  const dd=document.querySelector(".nav-dd");
+  if(!dd)return;
+  document.addEventListener("click",e=>{if(dd.open&&!dd.contains(e.target))dd.open=false;});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&dd.open){dd.open=false;dd.querySelector("summary").focus();}});
+})();

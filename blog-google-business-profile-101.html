@@ -48,7 +48,7 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
 .back-link:hover{text-decoration:underline}
 @media (max-width:900px){.article-wrap{padding:120px 20px 64px}}
 </style>
-<link rel="stylesheet" href="chrome.css?v=20261020">
+<link rel="stylesheet" href="chrome.css?v=20261021">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -81,6 +81,12 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
   <div class="wrap nav-in">
     <a class="nav-logo" href="index.html" aria-label="Full Plate Marketing Co. home"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co."></a>
     <ul class="nav-links">
+      <li class="lg-only nav-dd-li"><details class="nav-dd"><summary>Services</summary><div class="nav-dd-menu">
+          <a href="customer-experience.html">Customer Experience</a>
+          <a href="social-media-marketing.html">Social Media</a>
+          <a href="lead-generation.html">Lead Generation</a>
+          <a href="website-design.html">Website + Lead Capture</a>
+      </div></details></li>
       <li class="lg-only"><a href="learning-hub.html" aria-current="page">Learning Hub</a></li>
       <li class="lg-only"><a href="about.html">About</a></li>
       <li><a class="nav-kc" href="contact.html">Contact Us</a></li>
@@ -90,6 +96,11 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
   <div class="nav-menu" id="navMenu" hidden>
     <div class="wrap">
       <a href="index.html">Home</a>
+      <p class="nav-sub-label">Services</p>
+      <a class="nav-sub" href="customer-experience.html">Customer Experience</a>
+      <a class="nav-sub" href="social-media-marketing.html">Social Media</a>
+      <a class="nav-sub" href="lead-generation.html">Lead Generation</a>
+      <a class="nav-sub" href="website-design.html">Website + Lead Capture</a>
       <a href="learning-hub.html" aria-current="page">Learning Hub</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact Us</a>
@@ -159,6 +170,10 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
       </div>
     </div>
     <ul class="foot-links">
+      <li><a href="customer-experience.html">Customer Experience</a></li>
+      <li><a href="social-media-marketing.html">Social Media</a></li>
+      <li><a href="lead-generation.html">Lead Generation</a></li>
+      <li><a href="website-design.html">Website + Lead Capture</a></li>
       <li><a href="learning-hub.html">Learning Hub</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -173,5 +188,5 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
-<script src="site.js"></script>
+<script src="site.js?v=20261021"></script>
 </body></html>
