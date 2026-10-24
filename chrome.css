@@ -107,3 +107,8 @@
 .nav-links .nav-dd-menu a[aria-current="page"]{color:var(--maroon);font-weight:600}
 .nav-menu .nav-sub-label{font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--maroon);padding:16px 0 4px}
 .nav-menu a.nav-sub{font-family:var(--sans);font-size:19px;min-height:48px;padding-left:14px}
+
+/* client portal icon in the nav, top right */
+.nav-links a.nav-portal{width:40px;height:40px;min-height:40px;padding:0;justify-content:center;border-radius:50%;border:1.5px solid var(--line-strong);opacity:.75;margin-left:4px;transition:opacity .2s,border-color .2s,background .2s}
+.nav-links a.nav-portal:hover{opacity:1;border-color:var(--ink);background:rgba(27,47,51,.06)}
+.nav-links a.nav-portal[aria-current="page"]{opacity:1;border-color:var(--ink)}

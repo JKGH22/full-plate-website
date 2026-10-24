@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Client Portal | Full Plate Marketing Co.</title>
+<meta name="description" content="Full Plate Marketing client portal. Sign in to your dashboard.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://fullplatemarketing.co/client-portal.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261024">
+<style>
+  .cp-wrap{padding-block:36px 64px}
+  @media (min-width:640px){.cp-wrap{padding-block:64px 96px}}
+  .cp-card{max-width:440px;margin-inline:auto;background:var(--white);border:1px solid var(--line);border-radius:26px;padding:28px 22px;box-shadow:0 24px 48px -28px rgba(27,47,51,.35)}
+  @media (min-width:640px){.cp-card{padding:40px 38px}}
+  .cp-card .eyebrow{display:block;text-align:center}
+  .cp-card h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,7vw,44px);line-height:1.05;text-align:center;margin-top:10px}
+  .cp-card h1 em{color:var(--maroon)}
+  .cp-sub{text-align:center;font-size:16px;color:var(--ink-soft);margin-top:10px}
+  .cform input[type=password]{width:100%;min-height:52px;border:1.5px solid var(--line-strong);border-radius:14px;background:var(--white);padding:12px 14px;font:inherit;font-size:16px;color:var(--ink);transition:border-color .15s,box-shadow .15s}
+  .cp-pw{position:relative}
+  .cp-pw input{padding-right:64px!important}
+  .cp-show{position:absolute;right:6px;top:50%;transform:translateY(-50%);min-height:40px;padding:0 12px;border:0;background:none;font-size:14px;font-weight:600;color:var(--ink-soft);border-radius:10px}
+  .cp-show:hover{color:var(--ink)}
+  .cp-err{background:#F7E6E4;color:var(--maroon);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.45}
+  .cp-forgot{text-align:center;font-size:15px;color:var(--ink-soft)}
+  .cp-forgot a{color:var(--maroon);font-weight:600;white-space:nowrap}
+  .cp-lock{text-align:center;font-size:13.5px;color:var(--ink-faint);margin-top:18px}
+  .cp-lock svg{vertical-align:-2px;margin-right:6px}
+</style>
+</head><body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Full Plate Marketing Co. home"><img src="logo-teal.png" width="357" height="90" alt="Full Plate Marketing Co."></a>
+    <ul class="nav-links">
+      <li class="lg-only nav-dd-li"><details class="nav-dd"><summary>Services</summary><div class="nav-dd-menu">
+          <a href="customer-experience.html">Customer Experience</a>
+          <a href="social-media-marketing.html">Social Media</a>
+          <a href="lead-generation.html">Lead Generation</a>
+          <a href="website-design.html">Website + Lead Capture</a>
+      </div></details></li>
+      <li class="lg-only"><a href="learning-hub.html">Learning Hub</a></li>
+      <li class="lg-only"><a href="about.html">About</a></li>
+      <li><a class="nav-kc" href="contact.html">Contact Us</a></li><li><a class="nav-portal" href="client-portal.html" aria-current="page" aria-label="Client portal" title="Client portal"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 20c.9-3.7 3.8-5.8 7.2-5.8s6.3 2.1 7.2 5.8"/></svg></a></li>
+      <li class="sm-only"><button type="button" class="nav-menu-btn" aria-expanded="false" aria-controls="navMenu" aria-label="Menu"><svg class="ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg><svg class="ic-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></li>
+    </ul>
+  </div>
+  <div class="nav-menu" id="navMenu" hidden>
+    <div class="wrap">
+      <a href="index.html">Home</a>
+      <p class="nav-sub-label">Services</p>
+      <a class="nav-sub" href="customer-experience.html">Customer Experience</a>
+      <a class="nav-sub" href="social-media-marketing.html">Social Media</a>
+      <a class="nav-sub" href="lead-generation.html">Lead Generation</a>
+      <a class="nav-sub" href="website-design.html">Website + Lead Capture</a>
+      <a href="learning-hub.html">Learning Hub</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="client-portal.html" aria-current="page">Client Portal</a>
+    </div>
+  </div>
+</nav>
+<main id="top">
+  <section class="wrap cp-wrap">
+    <div class="cp-card">
+      <p class="eyebrow">Client Portal</p>
+      <h1>Welcome <em>back.</em></h1>
+      <p class="cp-sub">Sign in to see your dashboard.</p>
+      <form class="cform" id="portalForm" novalidate>
+        <p class="cp-err" id="cpErr" role="alert" hidden></p>
+        <div class="fg"><label for="cp-user">Username</label><input type="text" id="cp-user" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required></div>
+        <div class="fg"><label for="cp-pass">Password</label>
+          <div class="cp-pw"><input type="password" id="cp-pass" name="password" autocomplete="current-password" required><button type="button" class="cp-show" id="cpShow" aria-controls="cp-pass" aria-pressed="false">Show</button></div>
+        </div>
+        <button type="submit" class="btn-ink btn-cta fsubmit" id="cpBtn"><span>Log in</span><svg class="cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="cp-forgot">Forgot your login? <a href="mailto:hello@fullplatemarketing.co?subject=Client%20portal%20login%20help">Email us</a> or call <a href="tel:+12522567046">(252) 256-7046</a>.</p>
+      </form>
+      <p class="cp-lock"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>Private and secure. Your password is checked by your dashboard, never stored here.</p>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="logo-cream.png" width="357" height="90" alt="Full Plate Marketing Co.">
+        <p class="foot-local"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Proudly based on the Outer Banks of North Carolina.</p>
+        <p class="foot-nap">Kill Devil Hills, NC 27948 &middot; <a href="tel:+12522567046">(252) 256-7046</a></p>
+        <p class="foot-member">Proud member of the <a href="https://www.outerbankschamber.com/membership/full-plate-marketing/" target="_blank" rel="noopener">Outer Banks Chamber of Commerce</a></p>
+      </div>
+      <div class="foot-side">
+        <ul class="socials" aria-label="Follow Full Plate">
+          <li><a class="soc fb" href="https://www.facebook.com/FullPlateMarketingCo" target="_blank" rel="noopener" aria-label="Full Plate on Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8z"/></svg></a></li>
+          <li><a class="soc ig" href="https://www.instagram.com/fullplatemarketingco/" target="_blank" rel="noopener" aria-label="Full Plate on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a class="soc li" href="https://www.linkedin.com/company/full-plate-marketing-co/" target="_blank" rel="noopener" aria-label="Full Plate on LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3.5" y="9" width="3.4" height="11.5" rx=".4"/><circle cx="5.2" cy="5.2" r="2"/><path d="M10 9h3.2v1.6c.6-1 1.8-1.9 3.6-1.9 3.4 0 4.1 2.2 4.1 5.1v6.7h-3.4v-5.9c0-1.4-.1-3.1-1.9-3.1-1.9 0-2.2 1.4-2.2 3v6H10z"/></svg></a></li>
+          <li><a class="soc gg" href="https://share.google/eOzFf8hGjOE1XCviD" target="_blank" rel="noopener" aria-label="Leave Full Plate a review on Google"><svg width="19" height="19" viewBox="0 0 48 48" aria-hidden="true"><path class="g-r" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path class="g-b" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path class="g-y" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path class="g-g" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></a></li>
+        </ul>
+        <a class="foot-review" href="https://share.google/eOzFf8hGjOE1XCviD" target="_blank" rel="noopener">Leave us a review</a>
+      </div>
+    </div>
+    <ul class="foot-links">
+      <li><a href="customer-experience.html">Customer Experience</a></li>
+      <li><a href="social-media-marketing.html">Social Media</a></li>
+      <li><a href="lead-generation.html">Lead Generation</a></li>
+      <li><a href="website-design.html">Website + Lead Capture</a></li>
+      <li><a href="learning-hub.html">Learning Hub</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="terms-of-service.html">Terms of Service</a></li>
+      <li><a href="sms-optin.html">SMS Opt-In</a></li>
+      <li><a href="client-portal.html">Client Portal</a></li>
+    </ul>
+    <p class="foot-copy">&copy; 2026 Full Plate Marketing Co.<span class="foot-entity">Full Plate Marketing Co. is a trade name of Full Plate Marketing LLC.</span></p>
+  </div>
+</footer>
+<script src="site.js?v=20261021"></script>
+<script>
+(function(){
+  /* Username -> the dashboard's portal login address. Add a line per client. */
+  var PORTALS={
+    "accessdesigns":"https://access-designs-sales-dashboard.replit.app/portal-login",
+    "obxcc":"https://obxcc-scorecard.replit.app/portal-login"
+  };
+  var form=document.getElementById("portalForm"),err=document.getElementById("cpErr");
+  var user=document.getElementById("cp-user"),pass=document.getElementById("cp-pass");
+  var show=document.getElementById("cpShow"),btn=document.getElementById("cpBtn");
+  function fail(msg){err.textContent=msg;err.hidden=false;}
+  try{
+    var q=new URLSearchParams(location.search);
+    if(q.get("error")==="1")fail("That username and password didn't match. Please try again.");
+    if(q.get("error")==="locked")fail("Too many tries. Please wait a few minutes and try again.");
+    if(q.get("u"))user.value=q.get("u");
+    if(q.get("error")){history.replaceState(null,"",location.pathname);(user.value?pass:user).focus();}
+  }catch(e){}
+  show.addEventListener("click",function(){
+    var on=pass.type==="password";pass.type=on?"text":"password";
+    show.textContent=on?"Hide":"Show";show.setAttribute("aria-pressed",on);
+  });
+  form.addEventListener("submit",function(e){
+    e.preventDefault();err.hidden=true;
+    var u=user.value.trim().toLowerCase(),p=pass.value;
+    if(!u||!p){fail("Please enter your username and password.");return;}
+    var target=PORTALS[u];
+    if(!target){fail("That username and password didn't match. Please try again.");return;}
+    btn.disabled=true;btn.querySelector("span").textContent="Signing in...";
+    /* Hand the login straight to that client's dashboard, which checks the password and signs them in. */
+    var f=document.createElement("form");f.method="POST";f.action=target;f.style.display="none";
+    [["username",u],["password",p]].forEach(function(kv){var i=document.createElement("input");i.type="hidden";i.name=kv[0];i.value=kv[1];f.appendChild(i);});
+    document.body.appendChild(f);f.submit();
+  });
+  window.addEventListener("pageshow",function(){btn.disabled=false;btn.querySelector("span").textContent="Log in";pass.value="";});
+})();
+</script>
+</body></html>

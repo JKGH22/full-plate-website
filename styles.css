@@ -431,3 +431,8 @@ section{scroll-margin-top:60px}
 .faq details[open] summary::after{content:"\2212"}
 .prose .faq details p{margin:12px 0 4px;font-size:16.5px;line-height:1.7}
 .prose .lead+h2{margin-top:36px}
+
+/* client portal icon in the nav, top right */
+.nav-links a.nav-portal{width:40px;height:40px;min-height:40px;padding:0;justify-content:center;border-radius:50%;border:1.5px solid var(--line-strong);opacity:.75;margin-left:4px;transition:opacity .2s,border-color .2s,background .2s}
+.nav-links a.nav-portal:hover{opacity:1;border-color:var(--ink);background:rgba(27,47,51,.06)}
+.nav-links a.nav-portal[aria-current="page"]{opacity:1;border-color:var(--ink)}
