@@ -239,7 +239,10 @@
       try{
         const res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
         const out=await res.json();
-        if(out.success){card.innerHTML=successMarkup(pref);}
+        if(out.success){
+          if(typeof gtag==='function'){gtag('event','generate_lead',{form_name:'contact',meeting_preference:pref||'none'});}
+          card.innerHTML=successMarkup(pref);
+        }
         else{btn.disabled=false;btn.querySelector('span').textContent=label;showFormError(form,'Something went wrong on our end. Please try again, or email us directly at hello@fullplatemarketing.co.');}
       }catch(err){
         btn.disabled=false;btn.querySelector('span').textContent=label;
