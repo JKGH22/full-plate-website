@@ -16,3 +16,18 @@
   document.addEventListener("click",e=>{if(dd.open&&!dd.contains(e.target))dd.open=false;});
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&dd.open){dd.open=false;dd.querySelector("summary").focus();}});
 })();
+
+/* Analytics: count phone and email clicks as leads (GA4 key events). */
+(function(){
+  document.addEventListener("click",e=>{
+    const a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="mailto:"]');
+    if(!a||typeof gtag!=="function")return;
+    const href=a.getAttribute("href");
+    if(/portal/i.test(href))return; /* client support, not a new lead */
+    const isPhone=href.startsWith("tel:");
+    gtag("event",isPhone?"phone_click":"email_click",{
+      link_url:href.split("?")[0],
+      link_text:(a.textContent||"").trim().slice(0,80)
+    });
+  },{capture:true});
+})();
