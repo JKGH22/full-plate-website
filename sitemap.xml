@@ -67,6 +67,12 @@
 
   <!-- Blog: Google Business Profile 101 -->
   <url>
+    <loc>https://fullplatemarketing.co/ribbon-cutting.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://fullplatemarketing.co/blog-google-business-profile-101.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
