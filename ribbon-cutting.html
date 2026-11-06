@@ -63,14 +63,39 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
 .article-body figure{margin:30px 0 34px}
 .article-body figure img{width:100%;height:auto;display:block;border-radius:14px}
 .article-body figcaption{font-size:13.5px;line-height:1.5;opacity:.6;margin-top:10px}
-.article-body .fig-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 34px}
-.article-body .fig-pair img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block}
-.article-body .fig-pair figure{margin:0}
-.article-body .fig-portrait{max-width:420px;margin:30px auto 34px}
-.article-body .thanks{background:var(--cream);border-radius:14px;padding:26px 28px;margin:30px 0}
-.article-body .thanks p{margin-bottom:12px}
-.article-body .thanks p:last-child{margin-bottom:0}
-@media (max-width:900px){.article-wrap{padding:120px 20px 64px}.article-body .fig-pair{grid-template-columns:1fr}}
+.hero-fig{margin:0 0 30px!important}
+.hero-fig img{box-shadow:0 18px 40px rgba(27,47,51,.14)}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 38px}
+.details div{background:var(--white);border:1px solid rgba(27,47,51,.08);border-radius:12px;padding:16px 18px}
+.details span{display:block;font-size:11px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--maroon);margin-bottom:6px}
+.details b{font-weight:600;font-size:15px;line-height:1.4;display:block}
+.details a{color:var(--near-black);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--maroon)}
+.article-body a.inl{color:var(--maroon);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.pull{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.3;color:var(--maroon);text-align:center;padding:14px 20px;margin:38px 0;border-top:1px solid var(--cream-dark);border-bottom:1px solid var(--cream-dark)}
+.thanks-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0 34px}
+.thanks-grid div{background:var(--cream);border-radius:14px;padding:22px 22px 20px}
+.thanks-grid b{font-family:'DM Serif Display',serif;font-weight:400;font-size:21px;display:block;margin-bottom:4px}
+.thanks-grid em{display:block;font-style:normal;font-size:12px;font-weight:600;letter-spacing:1.4px;text-transform:uppercase;color:var(--maroon);margin-bottom:10px}
+.thanks-grid p{font-size:15px;line-height:1.65;margin:0;opacity:.85}
+.thanks-grid div.wide{grid-column:1/-1;background:var(--near-black);color:var(--cream)}
+.thanks-grid div.wide p{color:var(--cream)}.thanks-grid div.wide em{color:var(--sky)}
+.courses{background:var(--cream);border-radius:16px;padding:34px 28px 28px;margin:30px 0 34px;display:flex;flex-direction:column;align-items:center;gap:9px}
+.courses .c{height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;letter-spacing:.2px}
+.courses .c1{width:46%;background:var(--sky);color:var(--near-black)}
+.courses .c2{width:68%;background:var(--maroon);color:var(--cream)}
+.courses .c3{width:90%;background:var(--near-black);color:var(--cream)}
+.courses .cap{font-family:'DM Serif Display',serif;font-size:24px;margin-top:16px;color:var(--near-black)}
+.courses .cap i{color:var(--maroon)}
+.fig-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:30px 0 34px}
+.fig-pair img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;aspect-ratio:3/2}
+.fig-pair figure{margin:0}
+.banner-row{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:center;margin:30px 0 34px}
+.banner-row figure{margin:0}
+.banner-row p{margin-bottom:14px}
+.signoff{margin-top:40px;padding-top:26px;border-top:1px solid var(--cream-dark)}
+.signoff .sig{font-family:'DM Serif Display',serif;font-style:italic;font-size:30px;color:var(--near-black);margin:6px 0 2px}
+.signoff .role{font-size:13.5px;opacity:.6}
+@media (max-width:900px){.article-wrap{padding:120px 20px 64px}.details{grid-template-columns:1fr}.thanks-grid{grid-template-columns:1fr}.banner-row{grid-template-columns:1fr}.fig-pair{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="chrome.css?v=20261024">
 <script type="application/ld+json">
@@ -136,61 +161,83 @@ h1.article-title{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.2vw
 <article class="article-wrap">
   <div class="crumb"><a href="learning-hub.html">Learning Hub</a> <span>/ Proudly Outer Banks</span></div>
   <span class="article-tag">Proudly Outer Banks</span>
-  <h1 class="article-title">We Cut the Ribbon: Full Plate Is Officially Open on the Outer Banks</h1>
-  <div class="article-meta">November 2026 &middot; 3 min read &middot; James Kahle</div>
+  <h1 class="article-title">We Cut the Ribbon</h1>
+  <div class="article-meta">November 2026 &middot; 3 min read &middot; By James Kahle</div>
   <div class="article-body">
 
-<figure>
+<figure class="hero-fig">
   <img src="img/ribbon-cutting-cut.webp" width="1600" height="1066" alt="James Kahle laughing as the red ribbon is cut with the Outer Banks Chamber of Commerce's giant wooden scissors, with the Full Plate Marketing banner behind him" loading="eager">
-  <figcaption>The moment the ribbon came apart. The Chamber's giant wooden scissors made it official.</figcaption>
+  <figcaption>The exact second it became official. The scissors are real, and yes, they are that big.</figcaption>
 </figure>
 
-<p>On Wednesday, November 4, 2026, we gathered in the lobby of the Outer Banks Chamber of Commerce in Kill Devil Hills, and we cut a ribbon. It took about one second. Getting to that second took a little over a year.</p>
+<div class="details">
+  <div><span>When</span><b>Wednesday, November 4, 2026, 11 AM</b></div>
+  <div><span>Where</span><b><a href="https://www.outerbankschamber.com/" target="_blank" rel="noopener">Outer Banks Chamber of Commerce</a>, Kill Devil Hills</b></div>
+  <div><span>On the table</span><b>Cookies and cold milk</b></div>
+</div>
 
-<p>Full Plate started as an idea: business owners and their customers deserve a better experience. The ribbon cutting was the first time that idea stood in a room with other people, a banner behind it, and a pair of scissors big enough to need two hands.</p>
+<p>Full Plate started a little over a year ago as a belief I kept coming back to: business owners and their customers deserve a better experience. For most of that year it lived in notebooks, late nights, and conversations with owners around the Outer Banks.</p>
 
-<h2>Thank you, Outer Banks</h2>
+<p>On Wednesday morning it stood in a room. There was a banner behind it, a red ribbon in front of it, a lobby full of people who took time out of their week to be there, and a pair of wooden scissors that needed both hands. I got to cut the ribbon. It took about one second. I am still smiling about it.</p>
 
-<p>A ribbon cutting is really a thank-you note you get to say out loud, so here is ours.</p>
+<div class="pull">&ldquo;Business owners and their customers deserve a better experience.&rdquo;</div>
 
-<div class="thanks">
-<p><strong>Melissa Harrison,</strong> Chair of the Chamber Board, for the warm welcome that opened the morning.</p>
-<p><strong>Hunter Walsh,</strong> President and CEO of the Chamber, for the opportunity and for everything the Chamber does for businesses here.</p>
-<p><strong>Kelly Allman,</strong> for organizing the whole thing, down to the scissors, and for the photos.</p>
-<p><strong>Everyone who showed up on a Wednesday morning.</strong> Some of you drove across the bridge for it. That meant the world.</p>
+<h2>The people who made it happen</h2>
+
+<p>A ribbon cutting is really a thank-you note you get to say out loud. Here is mine.</p>
+
+<div class="thanks-grid">
+  <div><b>Melissa Harrison</b><em>Chamber Board Chair</em><p>Melissa opened the morning with a welcome so warm it took the nerves right out of the room.</p></div>
+  <div><b>Hunter Walsh</b><em>Chamber President &amp; CEO</em><p>Hunter gave Full Plate this opportunity, and the Chamber he leads shows up for businesses here every single day.</p></div>
+  <div><b>Kelly Allman</b><em>Chamber Team</em><p>Kelly organized every detail, from the run of show to the scissors, and made the whole thing feel easy.</p></div>
+  <div><b>Hannah</b><em>Behind the camera</em><p>Hannah captured the morning on photo and video so I could be in the moment instead of documenting it.</p></div>
+  <div class="wide"><b>And everyone who came</b><em>On a Wednesday morning, no less</em><p>Some of you rearranged your day. Some of you drove across the bridge. All of you made it a celebration instead of a ceremony. Thank you.</p></div>
 </div>
 
 <div class="fig-pair">
   <figure><img src="img/ribbon-cutting-group.webp" width="1600" height="1066" alt="Six people holding a red ribbon in front of the Full Plate Marketing banner at the Outer Banks Chamber of Commerce" loading="lazy"><figcaption>The official shot, ribbon intact.</figcaption></figure>
-  <figure><img src="img/ribbon-cutting-ribbon.webp" width="1600" height="1066" alt="James Kahle lining up the giant scissors on the ribbon as the group looks on" loading="lazy"><figcaption>Lining it up.</figcaption></figure>
+  <figure><img src="img/ribbon-cutting-ribbon.webp" width="1600" height="1066" alt="James Kahle lining up the giant scissors on the ribbon as the group looks on" loading="lazy"><figcaption>Lining it up. Two hands required.</figcaption></figure>
 </div>
 
 <h2>What I said, in about a minute</h2>
 
-<p>I kept the remarks short, because the Chamber gave me a minute and because the cookies were waiting. The gist:</p>
+<p>The Chamber gave me a minute, and the cookies were waiting, so I kept it short. The gist:</p>
 
-<p>I started Full Plate because I truly believe business owners and their customers deserve a better experience. I have spent my career working with startups, starting my own companies, helping others start theirs, and working for companies like Walmart, CVS and Amazon. Now I am taking everything I have learned and putting it to work for business owners here on the Outer Banks.</p>
+<p>I started Full Plate because I truly believe business owners and their customers deserve a better experience. I have spent my career working with startups, starting my own companies, helping others start theirs, and working for companies like Walmart, CVS and Amazon. Now I am taking everything I have learned and putting it to work for business owners right here on the Outer Banks.</p>
 
 <p>That is the whole mission. Everything else is detail.</p>
 
 <h2>Marketing, served in order</h2>
 
-<p>If you looked at the banner behind us, you saw three stacked courses: <strong>The Foundations</strong> on the bottom, <strong>Customer Experience</strong> in the middle, and <strong>Growth</strong> on top. Built from the bottom up.</p>
+<p>If you looked at the banner behind us, you saw three stacked courses. That stack is how we work, and it is the part I most wanted people in the room to take home.</p>
 
-<p>That is how we work. A lot of businesses get served dessert first: ads and posts arrive before the basics are ready. We start at the beginning. Get the foundations right, take great care of the customers you already have, and then grow. In that order.</p>
+<div class="courses" aria-label="The three courses">
+  <div class="c c1">Growth</div>
+  <div class="c c2">Customer Experience</div>
+  <div class="c c3">The Foundations</div>
+  <div class="cap">Built from the <i>bottom up.</i></div>
+</div>
 
-<figure class="fig-portrait">
-  <img src="img/ribbon-cutting-banner.webp" width="1000" height="1500" alt="The Full Plate Marketing retractable banner: Marketing, served in order, with the three courses and a QR code to book a Kitchen Check" loading="lazy">
-  <figcaption>The banner. Yes, the QR code works.</figcaption>
-</figure>
+<div class="banner-row">
+  <figure><img src="img/ribbon-cutting-banner.webp" width="1000" height="1500" alt="The Full Plate Marketing retractable banner: Marketing, served in order, with the three courses and a QR code to book a Kitchen Check" loading="lazy"></figure>
+  <div>
+    <p>A lot of businesses get served dessert first. Ads and posts show up before the basics are ready, and the owner wonders why the money went nowhere.</p>
+    <p>We start at the beginning. Get <strong>the foundations</strong> right: a website that works, a Google profile that is complete, a way to capture every lead. Then take great care of the <strong>customers you already have</strong>: quick replies, staying in touch, earning reviews. Then, and only then, <strong>grow</strong>.</p>
+    <p>Same order as a good meal. It just tastes better that way.</p>
+  </div>
+</div>
 
 <h2>What comes next</h2>
 
-<p>The ribbon is cut and the cookies are gone. Now the real work: helping Outer Banks business owners take great care of their customers, one plate at a time.</p>
+<p>The ribbon is cut and the cookies are gone. Now comes the part I actually started this for: helping Outer Banks business owners take great care of their customers, one plate at a time.</p>
 
-<p>If you own a business here and want an honest look at where you stand, that starts with a free Kitchen Check. If you just want to say hi, our door is open. Either way, thank you for being part of this.</p>
+<p>If you own a business here and want an honest look at where you stand, it starts with a free Kitchen Check. If you just want to say hi, our door is open, and so is the Chamber's. Joining the <a class="inl" href="https://www.outerbankschamber.com/" target="_blank" rel="noopener">Outer Banks Chamber of Commerce</a> was one of the best early decisions I made for Full Plate, and Wednesday was proof of why.</p>
 
-<p>Proudly Outer Banks.</p>
+<div class="signoff">
+  <p>Thank you for being part of this.</p>
+  <div class="sig">James</div>
+  <div class="role">Founder, Full Plate Marketing Co. &middot; Proudly Outer Banks</div>
+</div>
 
   </div>
   <div class="cta-card">
