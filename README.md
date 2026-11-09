@@ -29,3 +29,7 @@ When you change `site.js`, bump the `?v=` number in every page's `site.js` scrip
 ## Privacy policy
 
 `privacy.html` describes the use of Google Analytics. If tracking changes (new tools, ad pixels, etc.), update that section and its effective date.
+
+## Forwarding pages
+
+- `privacy-policy.html` forwards to `privacy.html`. Something outside the site links to the old address, so keep this file. It is a forwarding page only, so it does not need the Google Analytics tag.
