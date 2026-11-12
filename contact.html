@@ -74,9 +74,9 @@
 </nav>
 <main id="top">
   <header class="wrap hero">
-    <p class="eyebrow">The Kitchen Check</p>
-    <h1 class="h1-sm">Book your<br><em>Kitchen Check.</em></h1>
-    <p class="hero-sub wide">Your scorecard comes from a Kitchen Check, a complete review of your marketing. In about 30 minutes, we look at your website, your online presence, your reviews, and your follow-up, then show you exactly where you stand and where leads are slipping away. No pitch and no pressure, just a clear picture of what is working, what is not, and what to fix first.</p>
+    <p class="eyebrow" id="kcEyebrow">The Kitchen Check</p>
+    <h1 class="h1-sm" id="kcTitle">Book your<br><em>Kitchen Check.</em></h1>
+    <p class="hero-sub wide" id="kcSub">Your scorecard comes from a Kitchen Check, a complete review of your marketing. In about 30 minutes, we look at your website, your online presence, your reviews, and your follow-up, then show you exactly where you stand and where leads are slipping away. No pitch and no pressure, just a clear picture of what is working, what is not, and what to fix first.</p>
   </header>
 
   <section class="sec bg-white" aria-labelledby="getTitle">
@@ -84,7 +84,7 @@
       <div class="kc-left">
         <h2 id="getTitle">What you'll get</h2>
         <p>This is a real working session, not a sales pitch. In 30 minutes we will look at your business together and you will walk away with a clear picture of where you stand.</p>
-        <ul class="checks">
+        <ul class="checks" id="kcChecks">
           <li><span class="ck" aria-hidden="true">&check;</span><span>A full marketing scorecard across your website, online presence, reviews, and follow-up systems</span></li>
           <li><span class="ck" aria-hidden="true">&check;</span><span>The single biggest opportunity we see, ranked by impact</span></li>
           <li><span class="ck" aria-hidden="true">&check;</span><span>A simple sense of what to fix first, in plain language</span></li>
@@ -96,7 +96,7 @@
       </div>
       <div class="form-card">
         <h3>Tell us a bit about you</h3>
-        <p class="fc-sub">Fill this out and a real person will get back to you to set up your Kitchen Check. Takes about a minute.</p>
+        <p class="fc-sub" id="kcFormSub">Fill this out and a real person will get back to you to set up your Kitchen Check. Takes about a minute.</p>
         <div class="plate-box" id="plateBox" hidden>
           <p class="eyebrow">Your plate</p>
           <ul id="plateBoxList"></ul>
@@ -104,7 +104,8 @@
         </div>
         <form class="cform" id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="181dc2a5-c73b-48be-977b-442f893132da">
-        <input type="hidden" name="subject" value="New Kitchen Check request from the Full Plate website">
+        <input type="hidden" name="subject" id="cf-subject" value="New Kitchen Check request from the Full Plate website">
+        <input type="hidden" name="Requested" id="cf-offer" value="Kitchen Check">
         <input type="hidden" name="from_name" value="Full Plate Marketing Website">
         <input type="hidden" name="Plate from homepage" id="cf-plate" disabled>
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -257,5 +258,22 @@
       }
     });
   })();
+</script>
+
+<script>
+/* Digital Footprint Audit mode: contact.html?offer=audit (linked from Lead Generation and Google SEO content) */
+(function(){
+  if(new URLSearchParams(location.search).get('offer')!=='audit')return;
+  var $=function(id){return document.getElementById(id)};
+  document.title='Get a Free Digital Footprint Audit | Full Plate Marketing Co.';
+  $('kcEyebrow').textContent='Digital Footprint Audit';
+  $('kcTitle').innerHTML='Get your free<br><em>Digital Footprint Audit.</em>';
+  $('kcSub').textContent='A free look at where your business shows up on Google today, across your whole service area. We check your map rankings, your Google Business Profile, your listings around the web and what AI tools say about you, then show you what would move you the most.';
+  var ck='<span class="ck" aria-hidden="true">&check;</span>';
+  $('kcChecks').innerHTML=['Where you rank on Google Maps from points across your service area','A score for your Google Business Profile and what it is missing','A check of your name, address and phone across the major listings','What ChatGPT and Google\'s AI say about your business','The package that fits, or a custom plate if none do'].map(function(t){return '<li>'+ck+'<span>'+t+'</span></li>'}).join('');
+  $('kcFormSub').textContent='Fill this out and a real person will get back to you with your Digital Footprint Audit. Takes about a minute.';
+  $('cf-subject').value='New Digital Footprint Audit request from the Full Plate website';
+  $('cf-offer').value='Digital Footprint Audit';
+})();
 </script>
 </body></html>
