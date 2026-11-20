@@ -1,4 +1,4 @@
-/* Full Plate Marketing Co. shared styles. Mobile-first: base rules are the phone; min-width queries add room. */
+/* Full Plate Marketing shared styles. Mobile-first: base rules are the phone; min-width queries add room. */
 :root{
   color-scheme: light;
   --cream:#ECDDC6; --cream-light:#F5EFE2; --cream-dark:#D9C8A9;
