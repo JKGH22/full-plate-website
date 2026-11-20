@@ -4,7 +4,7 @@
   <!-- Homepage — highest priority, changes frequently -->
   <url>
     <loc>https://fullplatemarketing.co/</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -12,7 +12,7 @@
   <!-- Contact — primary conversion page -->
   <url>
     <loc>https://fullplatemarketing.co/contact.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,7 +36,7 @@
   <!-- Service: Lead Generation -->
   <url>
     <loc>https://fullplatemarketing.co/lead-generation.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -52,7 +52,7 @@
   <!-- About — trust/authority page -->
   <url>
     <loc>https://fullplatemarketing.co/about.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -60,12 +60,12 @@
   <!-- Learning Hub — content hub, grows over time -->
   <url>
     <loc>https://fullplatemarketing.co/learning-hub.html</loc>
-    <lastmod>2026-09-11</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog: Google Business Profile 101 -->
+  <!-- Blog: Ribbon cutting recap -->
   <url>
     <loc>https://fullplatemarketing.co/ribbon-cutting.html</loc>
     <lastmod>2026-11-05</lastmod>
